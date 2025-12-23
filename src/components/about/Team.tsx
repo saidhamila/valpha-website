@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import NextImage from "next/image";
 import { Section } from "@/components/layout/Section";
 import { team } from "@/lib/content/team";
 import { Linkedin, Twitter, Github } from "lucide-react";
@@ -28,7 +28,7 @@ export function Team() {
                 <div className="relative shrink-0">
                   <div className="absolute -inset-2 bg-gradient-to-br from-sky/30 to-sky/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-sky/10 group-hover:ring-sky/30 transition-all">
-                    <Image
+                    <NextImage
                       src={member.image!}
                       alt={member.name}
                       fill
