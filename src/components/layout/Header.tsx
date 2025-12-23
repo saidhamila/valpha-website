@@ -79,12 +79,17 @@ export function Header() {
     >
       <Container>
         <nav className="flex items-center justify-between h-16 sm:h-20">
-          <Link
-            href="/"
-            className="text-xl font-bold font-heading tracking-tight text-foreground"
-          >
-            vAlpha
-          </Link>
+            <Link
+              href="/"
+              className="flex items-center gap-2"
+            >
+              <img 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/channels4_profile-1766525650837.jpg?width=8000&height=8000&resize=contain" 
+                alt="vAlpha Logo" 
+                className="h-8 w-auto sm:h-10 dark:invert"
+              />
+              <span className="text-xl font-bold font-heading tracking-tight text-foreground">vAlpha</span>
+            </Link>
 
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (

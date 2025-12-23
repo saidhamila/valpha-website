@@ -70,14 +70,10 @@ export function QuoteSection() {
           <div className="p-8 rounded-3xl bg-sky text-primary shadow-xl shadow-sky/20">
             <Mail className="w-8 h-8 mb-4" />
             <h3 className="text-xl font-bold font-heading mb-2">Prefer email?</h3>
-            <p className="text-primary/80 mb-6">
-              You can reach us directly at <a href="mailto:contact@valpha.dev" className="underline font-medium hover:text-white transition-colors">contact@valpha.dev</a> for any specific inquiries.
-            </p>
-            <div className="pt-6 border-t border-primary/20">
-              <p className="text-xs font-medium uppercase tracking-wider opacity-60">Domain</p>
-              <p className="text-lg font-bold">valpha.dev</p>
+              <p className="text-primary/80">
+                You can reach us directly at <a href="mailto:contact@valpha.dev" className="underline font-medium hover:text-white transition-colors">contact@valpha.dev</a> for any specific inquiries.
+              </p>
             </div>
-          </div>
         </motion.div>
       </div>
     </Section>
