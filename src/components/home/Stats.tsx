@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Container } from "@/components/layout/Container";

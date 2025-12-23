@@ -1,5 +1,6 @@
 "use client";
 
+
 import { motion } from "framer-motion";
 import { MessageSquare, PenTool, Code2, Rocket } from "lucide-react";
 import { Section } from "@/components/layout/Section";

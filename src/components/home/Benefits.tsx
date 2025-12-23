@@ -1,5 +1,6 @@
 "use client";
 
+
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Section } from "@/components/layout/Section";
