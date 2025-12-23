@@ -10,18 +10,17 @@ import { Container } from "./Container";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const serviceLinks = [
-  { href: "/services/web-saas", label: "Web & SaaS Development", icon: Globe },
-  { href: "/services/ai-automation", label: "AI Assistants & Automation", icon: Bot },
+  { href: "/services/web-development", label: "Web Development", icon: Globe },
+  { href: "/services/saas-development", label: "SaaS Development", icon: Layout },
+  { href: "/services/ai-assistance", label: "AI Assistance", icon: Bot },
   { href: "/services/api-integration", label: "API & Systems Integration", icon: Plug },
 ];
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasDropdown: true },
-  { href: "/work", label: "Work" },
-  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/quote", label: "Get a Quote" },
 ];
 
 export function Header() {
@@ -167,10 +166,10 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <Link
-              href="/contact"
+              href="/quote"
               className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
             >
-              Get in touch
+              Get a Quote
             </Link>
           </div>
 
@@ -265,10 +264,10 @@ export function Header() {
                   )
                 ))}
                 <Link
-                  href="/contact"
+                  href="/quote"
                   className="mt-4 inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
                 >
-                  Get in touch
+                  Get a Quote
                 </Link>
               </div>
             </Container>
