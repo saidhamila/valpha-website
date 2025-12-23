@@ -107,14 +107,15 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative hidden lg:block"
             >
-              <div className="relative rounded-3xl overflow-hidden border border-border shadow-2xl aspect-[4/3]">
-                <Image 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                  alt="Tech Hero"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <div className="relative rounded-3xl overflow-hidden border border-border shadow-2xl aspect-[4/3]">
+                  <NextImage 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+                    alt="Tech Hero"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+
                 <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
                   {cards.map((card, index) => (
                     <motion.div
