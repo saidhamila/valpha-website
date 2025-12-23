@@ -3,6 +3,11 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
+// Polyfill Image for SSR to prevent ReferenceError: Image is not defined
+if (typeof window === "undefined") {
+  (global as any).Image = class {};
+}
+
 const Hero = dynamic(() => import("@/components/home/Hero").then((mod) => mod.Hero), { ssr: false });
 const LogoStrip = dynamic(() => import("@/components/home/LogoStrip").then((mod) => mod.LogoStrip), { ssr: false });
 const ServicesOverview = dynamic(() => import("@/components/home/ServicesOverview").then((mod) => mod.ServicesOverview), { ssr: false });
