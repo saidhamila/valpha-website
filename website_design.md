@@ -1,0 +1,9 @@
+<user_request>Build a production-ready, minimalistic multi-page website for my software/AI/web agency called vAlpha.</user_request>
+
+<todo_list>
+1. Install all required dependencies (Next.js 16.0.8+, React 19.2.1+, Tailwind 4.1, Framer Motion, Radix UI, Lucide, React Hook Form, Zod, TanStack Query, next-seo, next-themes) and configure Tailwind v4 with two-color system (primary #020617, accent #38BDF8), next.config.mjs with security headers, and TypeScript
+2. Create layout system with root app/layout.tsx (fonts: Space Grotesk + Inter, theme provider, SEO), shared components (Container, Section, PageShell, Header with sticky nav, Footer), and UI primitives (Button, Card, Badge, Input, TextArea with variants following two-color rule)
+3. Build Home page (/) with Hero, LogoStrip, Services overview (4 cards), Benefits section, Featured case study, TestimonialCarousel, and CTA strip; Services page (/services) with service grid and FAQ accordion; Work page (/work) with filterable case study grid
+4. Create About page (/about) with Timeline component and team section; Blog pages (/blog index and /blog/[slug] detail) with MDX/TS content source and styled typography; Contact page (/contact) with validated ContactForm (React Hook Form + Zod) and contact sidebar
+5. Implement contact API route (app/api/contact/route.ts) with server-side Zod validation, rate limiting, honeypot field, and security measures; add SEO configuration (sitemap.xml, robots.txt, per-page meta), accessibility features (focus rings, semantic HTML, WCAG AA contrast), light/dark mode with next-themes, ScrollToTopButton, and Framer Motion animations with prefers-reduced-motion support
+</todo_list>
