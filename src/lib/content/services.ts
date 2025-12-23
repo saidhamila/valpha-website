@@ -1,88 +1,130 @@
-import { Globe, Bot, Plug } from "lucide-react";
+import { Globe, Layout, Bot, Plug } from "lucide-react";
 
 export const services = [
   {
-    id: "web-saas",
-    slug: "web-saas",
+    id: "web-development",
+    slug: "web-development",
     icon: Globe,
-    title: "Web & SaaS Development",
-    shortDescription: "Custom web applications and SaaS platforms built for scale.",
-    description: "We design and build high-performance web applications and SaaS products using modern technologies. From MVPs to enterprise-grade platforms, we deliver solutions that grow with your business.",
+    title: "Web Development",
+    shortDescription: "Marketing websites, landing pages, and business sites built for performance and SEO.",
+    description: "We build modern, responsive, and SEO-optimized websites that help your business stand out. From high-converting landing pages to comprehensive business sites, we handle everything from design to deployment.",
     deliverables: [
-      "Full-stack web application development",
-      "SaaS platform architecture & implementation",
-      "Progressive web apps (PWA)",
-      "API design and development",
-      "Database design and optimization",
-      "Cloud infrastructure setup"
+      "Modern responsive UI/UX design",
+      "SEO fundamentals & metadata optimization",
+      "High-performance architecture",
+      "Security best practices (HTTPS, secure headers)",
+      "Deployment & launch support",
+      "Bundled API add-ons available"
     ],
-    pricing: "from $2,000",
-    heroDescription: "Transform your vision into a scalable, production-ready web application. We build custom SaaS platforms and web apps that drive business growth.",
+    pricing: "Free domain + 6 months free hosting",
+    heroDescription: "Get a professional web presence that converts visitors into customers. We build fast, secure, and SEO-ready websites tailored to your business needs.",
     features: [
       {
-        title: "Custom Web Applications",
-        description: "Tailored solutions built from scratch to meet your exact requirements, using modern frameworks like Next.js, React, and Node.js."
+        title: "Conversion-Focused Design",
+        description: "Every pixel is placed with intent to guide your visitors towards your goals."
       },
       {
-        title: "SaaS Platform Development",
-        description: "Multi-tenant architectures, subscription management, user authentication, and all the infrastructure needed for a successful SaaS business."
+        title: "SEO Optimized",
+        description: "Built-in SEO best practices to ensure your site is discoverable and ranks well on search engines."
       },
       {
-        title: "Performance Optimized",
-        description: "Every application we build is optimized for speed, with server-side rendering, code splitting, and efficient data fetching patterns."
+        title: "Lightning Fast",
+        description: "Optimized performance for better user experience and higher search engine rankings."
       },
       {
-        title: "Scalable Architecture",
-        description: "Designed to grow with your business, from your first 100 users to millions, without major rewrites."
+        title: "Mobile First",
+        description: "Seamless experience across all devices, from smartphones to large desktop screens."
       }
     ],
     process: [
-      { step: "Discovery", description: "We dive deep into your requirements, user needs, and business goals." },
-      { step: "Architecture", description: "Design the technical foundation that will support your growth." },
-      { step: "Development", description: "Iterative development with regular demos and feedback cycles." },
-      { step: "Launch & Support", description: "Smooth deployment and ongoing maintenance to ensure success." }
+      { step: "Discovery", description: "Understand your brand, audience, and business objectives." },
+      { step: "Design", description: "Create a visual identity that resonates with your customers." },
+      { step: "Build", description: "Develop your site using modern, reliable technologies." },
+      { step: "Launch", description: "Rigorous testing and smooth deployment to your new domain." }
     ]
   },
   {
-    id: "ai-automation",
-    slug: "ai-automation",
-    icon: Bot,
-    title: "AI Assistants & Automation",
-    shortDescription: "Intelligent chatbots and workflow automation powered by AI.",
-    description: "We build custom AI assistants and automation systems that transform how your team works. From customer support bots to internal workflow automation, we leverage the latest AI capabilities to drive efficiency.",
+    id: "saas-development",
+    slug: "saas-development",
+    icon: Layout,
+    title: "SaaS Development",
+    shortDescription: "Custom MVPs, dashboards, and subscription platforms built to scale.",
+    description: "We build complex web applications and SaaS products designed for scalability and user engagement. From authentication to payments, we handle the full stack of your product development.",
     deliverables: [
-      "Custom AI chatbot development",
-      "LLM integration (GPT, Claude, etc.)",
-      "Workflow automation systems",
-      "Document processing & analysis",
-      "Knowledge base creation",
-      "AI-powered analytics"
+      "Scalable system architecture",
+      "Authentication & role-based access",
+      "Payments & subscription integration",
+      "Custom dashboards & internal tools",
+      "Observability & error handling",
+      "AI & API optional add-ons"
     ],
-    pricing: "from $1,500",
-    heroDescription: "Harness the power of AI to automate repetitive tasks, provide 24/7 customer support, and unlock insights from your data.",
+    pricing: "Free domain + 6 months free hosting",
+    heroDescription: "Turn your product idea into a scalable SaaS platform. We handle the complexity of building modern web applications so you can focus on your business.",
     features: [
       {
-        title: "Custom AI Chatbots",
-        description: "Intelligent assistants trained on your data, integrated with your systems, and designed to handle real customer interactions."
+        title: "Scalable Architecture",
+        description: "Systems designed to grow with your user base without performance degradation."
       },
       {
-        title: "Workflow Automation",
-        description: "Eliminate manual processes with smart automation that learns and improves over time."
+        title: "Secure Authentication",
+        description: "Robust user management and secure access controls for your sensitive data."
       },
       {
-        title: "Document Intelligence",
-        description: "Extract, analyze, and act on information from documents, emails, and unstructured data."
+        title: "Payment Integration",
+        description: "Seamless billing and subscription management with Stripe and other providers."
       },
       {
-        title: "LLM Integration",
-        description: "Seamless integration with GPT-4, Claude, and other leading language models, with proper guardrails and cost optimization."
+        title: "Data Insights",
+        description: "Powerful dashboards and reporting tools to help you make data-driven decisions."
       }
     ],
     process: [
-      { step: "Use Case Analysis", description: "Identify the highest-impact opportunities for AI in your workflow." },
-      { step: "Data Preparation", description: "Organize and prepare your knowledge base for AI training." },
-      { step: "Development & Training", description: "Build and fine-tune AI systems specific to your domain." },
-      { step: "Deployment & Iteration", description: "Launch with monitoring and continuous improvement based on real usage." }
+      { step: "Discovery", description: "Deep dive into your product vision and technical requirements." },
+      { step: "Architecture", description: "Design a robust foundation for your scalable application." },
+      { step: "Build", description: "Agile development with regular milestones and feedback loops." },
+      { step: "QA & Launch", description: "Thorough testing and managed deployment to production." }
+    ]
+  },
+  {
+    id: "ai-assistance",
+    slug: "ai-assistance",
+    icon: Bot,
+    title: "AI Assistance",
+    shortDescription: "Intelligent AI features integrated into your web and SaaS products.",
+    description: "We embed powerful AI capabilities directly into your products to automate tasks and enhance user experience. From intelligent chatbots to content summarization, we make your software smarter.",
+    deliverables: [
+      "Embedded AI chat/helpdesk assistants",
+      "AI content drafting & summarization",
+      "Knowledge base & RAG integration",
+      "Privacy-first secure integration",
+      "Custom LLM fine-tuning options",
+      "Automated customer Q&A systems"
+    ],
+    pricing: "Custom integration available",
+    heroDescription: "Supercharge your software with modern AI capabilities. We integrate intelligent features that provide real value to your users and save time for your team.",
+    features: [
+      {
+        title: "Intelligent Chat",
+        description: "AI assistants that understand your business and provide accurate support to your users."
+      },
+      {
+        title: "Content Automation",
+        description: "Save hours of work with AI-powered drafting, summarization, and translation features."
+      },
+      {
+        title: "Privacy First",
+        description: "Secure integrations that protect your data and respect user privacy."
+      },
+      {
+        title: "RAG Integration",
+        description: "Connect AI to your specific business knowledge for accurate, contextual responses."
+      }
+    ],
+    process: [
+      { step: "Audit", description: "Identify where AI can provide the most value in your product." },
+      { step: "Integration", description: "Seamlessly connect AI models to your existing systems." },
+      { step: "Testing", description: "Extensive testing for accuracy, safety, and performance." },
+      { step: "Support", description: "Ongoing monitoring and refinement of AI interactions." }
     ]
   },
   {
@@ -90,64 +132,76 @@ export const services = [
     slug: "api-integration",
     icon: Plug,
     title: "API & Systems Integration",
-    shortDescription: "Connect your tools and systems for seamless data flow.",
-    description: "We specialize in connecting disparate systems and building robust API integrations. Whether you need to sync your CRM with your database or build a custom middleware solution, we make your systems work together.",
+    shortDescription: "Reliable connections between your tools and third-party systems.",
+    description: "We specialize in making your tools talk to each other. Whether it's syncing data between platforms or building custom middleware, we ensure your systems work in harmony.",
     deliverables: [
       "Third-party API integrations",
-      "Custom middleware development",
-      "Data synchronization solutions",
-      "Legacy system modernization",
-      "Webhook implementations",
-      "ETL pipeline development"
+      "Webhooks & real-time data sync",
+      "Secure OAuth & API key management",
+      "Robust retry & rate-limit handling",
+      "ETL-lite & data transformation",
+      "Input validation & error logging"
     ],
-    pricing: "from $1,000",
-    heroDescription: "Break down data silos and create seamless workflows by connecting all your business systems into a unified, efficient operation.",
+    pricing: "Custom quotes based on complexity",
+    heroDescription: "Eliminate data silos and manual work by connecting your business tools. We build secure, reliable integrations that keep your data moving.",
     features: [
       {
-        title: "API Development",
-        description: "RESTful and GraphQL APIs designed for performance, security, and developer experience."
+        title: "Reliable Sync",
+        description: "Robust data synchronization that handles failures and rate limits gracefully."
       },
       {
-        title: "Third-Party Integrations",
-        description: "Connect with any service—CRMs, payment processors, marketing tools, ERPs, and more."
+        title: "Secure Methods",
+        description: "Industry-standard authentication and secure management of sensitive API keys."
       },
       {
-        title: "Data Synchronization",
-        description: "Real-time and batch sync solutions that keep your data consistent across all systems."
+        title: "Custom Middleware",
+        description: "Bespoke code to transform and route data exactly where it needs to go."
       },
       {
-        title: "Legacy Modernization",
-        description: "Wrap legacy systems with modern APIs to extend their life and enable new capabilities."
+        title: "Real-time Updates",
+        description: "Webhook implementations for instant data flow between your business tools."
       }
     ],
     process: [
-      { step: "Systems Audit", description: "Map your current systems and identify integration points." },
-      { step: "Architecture Design", description: "Design robust, scalable integration patterns." },
-      { step: "Implementation", description: "Build integrations with proper error handling and monitoring." },
-      { step: "Maintenance", description: "Ongoing support to handle API changes and new requirements." }
+      { step: "Analysis", description: "Map out your systems and identify necessary data flows." },
+      { step: "Design", description: "Create a secure and efficient integration architecture." },
+      { step: "Implementation", description: "Build and deploy reliable connections between your tools." },
+      { step: "Monitoring", description: "Automated alerts and logs to ensure ongoing reliability." }
     ]
   }
 ];
 
+export const pricingDetails = {
+  initial: "Free domain included + 6 months free hosting at the start.",
+  recurring: [
+    { label: "Hosting", price: "$60/month" },
+    { label: "Maintenance", price: "$150/month" }
+  ]
+};
+
 export const faqs = [
   {
-    question: "What is your typical project timeline?",
-    answer: "Project timelines vary based on scope and complexity. A typical MVP takes 6-10 weeks, while larger enterprise projects can span 3-6 months. We provide detailed timelines during our discovery phase."
+    question: "What is included in the free domain and hosting offer?",
+    answer: "For all new web and SaaS development projects, we include one year of domain registration and six months of high-performance hosting at no extra cost to help you get started."
+  },
+  {
+    question: "What are the costs after the first 6 months?",
+    answer: "After the initial 6-month period, hosting is $60/month and maintenance is $150/month. This covers server costs, security updates, and regular backups."
   },
   {
     question: "Do you offer ongoing maintenance and support?",
-    answer: "Yes, we offer flexible maintenance and support packages. This includes bug fixes, security updates, performance monitoring, and feature enhancements based on your needs."
+    answer: "Yes, our maintenance package includes regular bug fixes, security updates, performance monitoring, and small enhancements to keep your software running smoothly."
   },
   {
     question: "What technologies do you work with?",
-    answer: "We specialize in modern web technologies including React, Next.js, Node.js, Python, and various AI/ML frameworks. We also work with cloud platforms like AWS, GCP, and Azure."
+    answer: "We specialize in modern web technologies including React, Next.js, Node.js, and Python. We use cloud infrastructure like AWS and Vercel to ensure scalability and reliability."
   },
   {
-    question: "How do you handle project communication?",
-    answer: "We believe in transparent, frequent communication. You'll have a dedicated project manager, weekly progress updates, and access to our project management tools for real-time visibility."
+    question: "Can you integrate AI into my existing website?",
+    answer: "Absolutely. Our AI Assistance service is designed to be embedded into both new and existing products, whether it's a simple website or a complex SaaS dashboard."
   },
   {
-    question: "Can you work with our existing team?",
-    answer: "Absolutely. We often collaborate with in-house teams, providing additional expertise and capacity. We adapt our workflow to integrate seamlessly with your existing processes."
+    question: "How do you handle data security?",
+    answer: "Security is built into every layer. We use secure headers, encrypted connections, and follow industry best practices for authentication and data management."
   }
 ];
