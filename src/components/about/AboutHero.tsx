@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import NextImage from "next/image";
 import { Container } from "@/components/layout/Container";
 
 export function AboutHero() {
@@ -30,7 +30,7 @@ export function AboutHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative aspect-video lg:aspect-square rounded-3xl overflow-hidden border border-border shadow-2xl"
           >
-            <Image 
+            <NextImage 
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
               alt="Our Team Workspace"
               fill
