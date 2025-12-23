@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import NextImage from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, TrendingUp, Shield } from "lucide-react";
 import { Container } from "@/components/layout/Container";
