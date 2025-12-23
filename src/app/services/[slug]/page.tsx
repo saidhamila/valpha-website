@@ -93,14 +93,15 @@ export default async function ServicePage({ params }: Props) {
                 </Link>
               </div>
             </div>
-            <div className="relative aspect-video rounded-3xl overflow-hidden border border-border bg-muted shadow-2xl">
-              <Image
-                src={heroImage}
-                alt={service.title}
-                fill
-                className="object-cover"
-              />
-            </div>
+              <div className="relative aspect-video rounded-3xl overflow-hidden border border-border bg-muted shadow-2xl">
+                <NextImage
+                  src={heroImage}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
           </div>
         </Container>
       </section>
