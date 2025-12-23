@@ -3,13 +3,13 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
-import { services, faqs } from "@/lib/content/services";
+import { services, faqs, pricingDetails } from "@/lib/content/services";
 import { ServicesFAQ } from "@/components/services/ServicesFAQ";
 import { CTAStrip } from "@/components/home/CTAStrip";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Web development, AI automation, and systems integration. Full-stack solutions for modern businesses.",
+  description: "Web development, SaaS platforms, AI assistance, and systems integration. Modern software for businesses.",
 };
 
 export default function ServicesPage() {
@@ -18,12 +18,12 @@ export default function ServicesPage() {
       <section className="pt-32 pb-16 bg-gradient-to-b from-sky/5 to-transparent">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-sky font-medium mb-4">Our Services</p>
+            <p className="text-sky font-medium mb-4">Our Expertise</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-foreground mb-6">
-              End-to-end software solutions
+              Modern solutions for the digital age
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              From custom web applications to AI-powered automation, we build the technology that powers your business growth.
+              We specialize in building high-performance websites, scalable SaaS platforms, and intelligent AI features that drive business growth.
             </p>
           </div>
         </Container>
@@ -31,10 +31,10 @@ export default function ServicesPage() {
 
       <Section>
         <div className="grid gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.id}
-              className="grid lg:grid-cols-2 gap-8 p-6 sm:p-8 rounded-2xl border border-border bg-card"
+              className="grid lg:grid-cols-2 gap-8 p-6 sm:p-8 rounded-2xl border border-border bg-card hover:border-sky/50 transition-all"
             >
               <div>
                 <div className="flex items-center gap-4 mb-4">
@@ -49,13 +49,22 @@ export default function ServicesPage() {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-sky hover:gap-3 transition-all"
-                >
-                  Learn more
-                  <ArrowRight size={16} />
-                </Link>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-sky hover:gap-3 transition-all"
+                  >
+                    Learn more
+                    <ArrowRight size={16} />
+                  </Link>
+                  <Link
+                    href="/quote"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all"
+                  >
+                    Get a Quote
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
               <div className="bg-muted/30 rounded-xl p-6">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
@@ -76,6 +85,23 @@ export default function ServicesPage() {
       </Section>
 
       <Section className="bg-muted/30">
+        <Container>
+          <div className="p-8 sm:p-12 rounded-3xl bg-card border border-border text-center">
+            <h2 className="text-3xl font-bold font-heading text-foreground mb-4">Transparent Pricing</h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">{pricingDetails.initial}</p>
+            <div className="grid sm:grid-cols-2 gap-6 max-w-lg mx-auto">
+              {pricingDetails.recurring.map((item) => (
+                <div key={item.label} className="p-6 rounded-2xl border border-border bg-muted/20">
+                  <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
+                  <p className="text-2xl font-bold text-foreground">{item.price}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <Section>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold font-heading text-foreground mb-8 text-center">
             Frequently Asked Questions
