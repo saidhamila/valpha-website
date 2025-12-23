@@ -83,21 +83,21 @@ export function Hero() {
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
               We design and build custom web applications, AI assistants, and automation systems that help businesses scale faster and work smarter.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium rounded-full bg-sky text-primary hover:bg-sky/90 transition-colors"
-              >
-                Book a discovery call
-                <ArrowRight size={18} />
-              </Link>
-              <Link
-                href="/work"
-                className="inline-flex items-center justify-center px-6 py-3.5 text-base font-medium rounded-full border border-border text-foreground hover:bg-muted transition-colors"
-              >
-                View our work
-              </Link>
-            </div>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/quote"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium rounded-full bg-sky text-primary hover:bg-sky/90 transition-colors"
+                >
+                  Get a Quote
+                  <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center px-6 py-3.5 text-base font-medium rounded-full border border-border text-foreground hover:bg-muted transition-colors"
+                >
+                  View our work
+                </Link>
+              </div>
           </motion.div>
 
           <motion.div
