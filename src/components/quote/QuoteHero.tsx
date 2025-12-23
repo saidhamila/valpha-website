@@ -3,26 +3,27 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 
-export function ContactHero() {
+export function QuoteHero() {
   return (
-    <section className="pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section className="pt-32 pb-16 bg-gradient-to-b from-sky/10 to-transparent">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <p className="text-sm font-medium uppercase tracking-wider text-sky mb-3">
-            Contact
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold font-heading text-foreground tracking-tight">
-            Let&apos;s build something great together.
-          </h1>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-            Ready to start a project or have questions? Fill out the form below and we&apos;ll get back to you within 24 hours.
-          </p>
-        </motion.div>
+        <div className="max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase rounded-full bg-sky/10 text-sky">
+              Get Started
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-foreground mb-6 leading-[1.1]">
+              Tell us about your next <span className="text-sky">big project</span>
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Ready to take your business to the next level? Fill out the form below and we&apos;ll provide a tailored quote for your specific needs.
+            </p>
+          </motion.div>
+        </div>
       </Container>
     </section>
   );
