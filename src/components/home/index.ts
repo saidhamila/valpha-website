@@ -1,3 +1,5 @@
+"use client";
+
 export { Hero } from "./Hero";
 export { LogoStrip } from "./LogoStrip";
 export { ServicesOverview } from "./ServicesOverview";
