@@ -30,18 +30,22 @@ export function Footer() {
     <footer className="bg-[#020617] text-white">
       <Container className="py-16 sm:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
-            <Link href="/" className="text-2xl font-bold font-heading tracking-tight text-white">
-              vAlpha
-            </Link>
-            <p className="mt-4 text-gray-400 max-w-sm leading-relaxed">
-              High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.
-            </p>
-            <div className="mt-6 space-y-2 text-sm text-gray-400">
-              <p>Contact: <a href="mailto:contact@valpha.dev" className="text-white hover:text-sky transition-colors">contact@valpha.dev</a></p>
-              <p>Domain: <span className="text-white">valpha.dev</span></p>
-            </div>
-            <div className="flex gap-4 mt-6">
+            <div className="lg:col-span-2">
+              <Link href="/" className="flex items-center gap-2 mb-4">
+                <img 
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/channels4_profile-1766525650837.jpg?width=8000&height=8000&resize=contain" 
+                  alt="vAlpha Logo" 
+                  className="h-10 w-auto invert"
+                />
+                <span className="text-2xl font-bold font-heading tracking-tight text-white">vAlpha</span>
+              </Link>
+              <p className="text-gray-400 max-w-sm leading-relaxed">
+                High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.
+              </p>
+              <div className="mt-6 space-y-2 text-sm text-gray-400">
+                <p>Contact: <a href="mailto:contact@valpha.dev" className="text-white hover:text-sky transition-colors">contact@valpha.dev</a></p>
+              </div>
+              <div className="flex gap-4 mt-6">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
