@@ -12,9 +12,10 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
   ],
   services: [
-    { href: "/services/web-saas", label: "Web Development" },
-    { href: "/services/ai-automation", label: "AI & Automation" },
-    { href: "/services/api-integration", label: "Integrations" },
+    { href: "/services/web-development", label: "Web Development" },
+    { href: "/services/saas-development", label: "SaaS Development" },
+    { href: "/services/ai-assistance", label: "AI Assistance" },
+    { href: "/services/api-integration", label: "API & Systems Integration" },
   ],
 };
 
@@ -34,8 +35,12 @@ export function Footer() {
               vAlpha
             </Link>
             <p className="mt-4 text-gray-400 max-w-sm leading-relaxed">
-              We build intelligent software solutions that help businesses automate, scale, and innovate.
+              High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.
             </p>
+            <div className="mt-6 space-y-2 text-sm text-gray-400">
+              <p>Contact: <a href="mailto:contact@valpha.dev" className="text-white hover:text-sky transition-colors">contact@valpha.dev</a></p>
+              <p>Domain: <span className="text-white">valpha.dev</span></p>
+            </div>
             <div className="flex gap-4 mt-6">
               {socialLinks.map((link) => (
                 <a
