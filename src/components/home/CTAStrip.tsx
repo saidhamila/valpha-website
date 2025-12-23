@@ -24,13 +24,13 @@ export function CTAStrip() {
           <p className="mt-4 text-lg text-white/70 max-w-xl mx-auto">
             Let&apos;s discuss how we can help you ship faster and scale smarter.
           </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center gap-2 px-8 py-4 text-base font-medium rounded-full bg-white text-blue-900 hover:bg-white/90 transition-colors"
-          >
-            Get in touch
-            <ArrowRight size={18} />
-          </Link>
+            <Link
+              href="/quote"
+              className="mt-8 inline-flex items-center gap-2 px-8 py-4 text-base font-medium rounded-full bg-white text-blue-900 hover:bg-white/90 transition-colors"
+            >
+              Get a Quote
+              <ArrowRight size={18} />
+            </Link>
         </motion.div>
       </Container>
     </section>

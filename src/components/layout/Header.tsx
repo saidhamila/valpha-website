@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Globe, Bot, Plug } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Layout, Bot, Plug } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
 import { ThemeToggle } from "@/components/ThemeToggle";
