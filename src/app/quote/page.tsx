@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { ContactHero } from "@/components/contact/ContactHero";
-import { ContactSection } from "@/components/contact/ContactSection";
+import { QuoteHero } from "@/components/quote/QuoteHero";
+import { QuoteSection } from "@/components/quote/QuoteSection";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch with vAlpha. Let's discuss your next project and how we can help you build smarter software.",
+  title: "Get a Quote",
+  description: "Request a personalized quote for your next software project. Web, SaaS, AI, and Systems Integration solutions from vAlpha.",
 };
 
-export default function ContactPage() {
+export default function QuotePage() {
   return (
     <>
-      <ContactHero />
-      <ContactSection />
+      <QuoteHero />
+      <QuoteSection />
     </>
   );
 }
