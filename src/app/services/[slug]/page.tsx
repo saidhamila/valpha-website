@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+import NextImage from "next/image";
 import { ArrowLeft, ArrowRight, Check, Shield } from "lucide-react";
 import { services, faqs, pricingDetails } from "@/lib/content/services";
 import { Container } from "@/components/layout/Container";
