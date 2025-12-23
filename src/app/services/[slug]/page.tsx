@@ -46,8 +46,8 @@ export default async function ServicePage({ params }: Props) {
   const prevService = serviceIndex > 0 ? services[serviceIndex - 1] : null;
   const nextService = serviceIndex < services.length - 1 ? services[serviceIndex + 1] : null;
 
-  // Placeholder image based on service slug
-  const heroImage = `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop`; // Generic tech image
+    // Use service image if available, otherwise generic placeholder
+    const heroImage = service.image || `https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop`;
 
   return (
     <main>
