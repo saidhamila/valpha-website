@@ -100,39 +100,44 @@ export function Hero() {
               </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="grid grid-cols-2 gap-4">
-              {cards.map((card, index) => (
-                <motion.div
-                  key={card.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className={`p-6 rounded-2xl border border-border bg-card/50 backdrop-blur-sm ${
-                    index === 0 ? "col-span-2" : ""
-                  }`}
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 rounded-lg bg-sky/10">
-                      <card.icon className="w-5 h-5 text-sky" />
-                    </div>
-                    <span className="text-sm font-medium text-muted-foreground">
-                      {card.label}
-                    </span>
-                  </div>
-                  <p className="text-2xl font-bold font-heading text-foreground">
-                    {card.stat}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-sky to-sky/50 rounded-full blur-2xl opacity-40" />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+              <div className="relative rounded-3xl overflow-hidden border border-border shadow-2xl aspect-[4/3]">
+                <Image 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+                  alt="Tech Hero"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
+                  {cards.map((card, index) => (
+                    <motion.div
+                      key={card.label}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                      className="p-4 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md"
+                    >
+                      <div className="flex items-center gap-2 mb-1">
+                        <card.icon className="w-4 h-4 text-sky" />
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-white/70">
+                          {card.label}
+                        </span>
+                      </div>
+                      <p className="text-lg font-bold text-white">
+                        {card.stat}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-sky to-sky/50 rounded-full blur-2xl opacity-40" />
+            </motion.div>
         </div>
       </Container>
     </section>
