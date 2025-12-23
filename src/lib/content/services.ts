@@ -16,8 +16,9 @@ export const services = [
       "Deployment & launch support",
       "Bundled API add-ons available"
     ],
-    pricing: "Free domain + 6 months free hosting",
-    heroDescription: "Get a professional web presence that converts visitors into customers. We build fast, secure, and SEO-ready websites tailored to your business needs.",
+      pricing: "Free domain + 6 months free hosting",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+      heroDescription: "Get a professional web presence that converts visitors into customers. We build fast, secure, and SEO-ready websites tailored to your business needs.",
     features: [
       {
         title: "Conversion-Focused Design",

@@ -5,12 +5,12 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 import { Container } from "./Container";
 
 const footerLinks = {
-  company: [
-    { href: "/about", label: "About" },
-    { href: "/work", label: "Work" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
-  ],
+    company: [
+      { href: "/about", label: "About" },
+      { href: "/work", label: "Work" },
+      { href: "/blog", label: "Blog" },
+      { href: "/quote", label: "Get a Quote" },
+    ],
   services: [
     { href: "/services/web-development", label: "Web Development" },
     { href: "/services/saas-development", label: "SaaS Development" },
