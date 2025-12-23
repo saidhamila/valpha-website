@@ -6,10 +6,10 @@ import { ChevronDown } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const faqs = [
-  {
-    question: "How long does a typical project take?",
-    answer: "Most MVPs take 6-10 weeks from kickoff to launch. Larger enterprise projects typically span 3-6 months. We provide detailed timelines during our discovery phase based on your specific requirements.",
-  },
+    {
+      question: "How long does a typical project take?",
+      answer: "2-4 weeks for full completed websites. 6-10 weeks for a fully working SaaS.",
+    },
   {
     question: "What is your pricing model?",
     answer: "We offer both fixed-price and time & materials engagements depending on project scope. Fixed-price works well for well-defined projects, while T&M provides flexibility for evolving requirements. All projects start with a paid discovery phase.",
