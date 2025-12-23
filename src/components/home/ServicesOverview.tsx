@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import NextImage from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/layout/Section";
@@ -28,7 +28,7 @@ export function ServicesOverview() {
               className="group block rounded-2xl border border-border bg-card hover:border-sky/50 transition-all h-full overflow-hidden"
             >
               <div className="relative aspect-video overflow-hidden">
-                <Image 
+                <NextImage 
                   src={service.image!}
                   alt={service.title}
                   fill
