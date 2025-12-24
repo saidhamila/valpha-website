@@ -10,23 +10,23 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: {
-    default: "vAlpha | Creative Agency & Digital Studio",
-    template: "%s | vAlpha",
+    default: "EliteGYM | Transform Your Limits",
+    template: "%s | EliteGYM",
   },
-  description: "We craft iconic digital identities and immersive web experiences. A premium creative agency dedicated to visionary design and strategic storytelling.",
-  keywords: ["creative agency", "digital studio", "brand identity", "web design", "UX design", "creative strategy"],
-  authors: [{ name: "vAlpha" }],
+  description: "Experience the ultimate fitness destination. EliteGYM offers world-class personal training, state-of-the-art equipment, and a community dedicated to your transformation.",
+  keywords: ["gym", "fitness center", "personal training", "bodybuilding", "yoga classes", "HIIT training", "EliteGYM"],
+  authors: [{ name: "EliteGYM" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "vAlpha",
-    title: "vAlpha | Creative Agency & Digital Studio",
-    description: "We craft iconic digital identities and immersive web experiences. A premium creative agency dedicated to visionary design and strategic storytelling.",
+    siteName: "EliteGYM",
+    title: "EliteGYM | Transform Your Limits",
+    description: "Experience the ultimate fitness destination. EliteGYM offers world-class personal training, state-of-the-art equipment, and a community dedicated to your transformation.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "vAlpha | Creative Agency & Digital Studio",
-    description: "We craft iconic digital identities and immersive web experiences. A premium creative agency dedicated to visionary design and strategic storytelling.",
+    title: "EliteGYM | Transform Your Limits",
+    description: "Experience the ultimate fitness destination. EliteGYM offers world-class personal training, state-of-the-art equipment, and a community dedicated to your transformation.",
   },
   robots: {
     index: true,
