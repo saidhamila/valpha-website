@@ -98,7 +98,7 @@ export function Header() {
             <img 
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Untitled-design-13-1766536595488.png?width=8000&height=8000&resize=contain" 
               alt="vAlpha Logo" 
-              className="h-10 w-auto sm:h-12 dark:invert"
+              className="h-14 w-auto sm:h-12 dark:invert"
             />
             <span className="text-2xl font-bold font-heading tracking-tight text-foreground">vAlpha</span>
           </Link>
