@@ -4,7 +4,7 @@
 import Link from "next/link";
 import NextImage from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Zap, TrendingUp, Shield, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 
 const cards = [
@@ -25,9 +25,15 @@ const floatingShapes = [
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-sky/5 via-transparent to-transparent" />
-      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-sky/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-sky/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s" }} />
+      </div>
+
       {floatingShapes.map((shape, index) => (
         <motion.div
           key={index}
@@ -73,34 +79,42 @@ export function Hero() {
       
       <Container className="relative z-10 py-20 sm:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight text-foreground leading-[1.1]">
-              Build smarter products with{" "}
-              <span className="text-gradient">AI-powered</span> engineering.
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              We design and build custom web applications, AI assistants, and automation systems that help businesses scale faster and work smarter.
-            </p>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/quote"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium rounded-full bg-sky text-primary hover:bg-sky/90 transition-colors"
-                >
-                  Get a Quote
-                  <ArrowRight size={18} />
-                </Link>
-                <Link
-                  href="/work"
-                  className="inline-flex items-center justify-center px-6 py-3.5 text-base font-medium rounded-full border border-border text-foreground hover:bg-muted transition-colors"
-                >
-                  View our work
-                </Link>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky/10 border border-sky/20 mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
+                </span>
+                <span className="text-xs font-semibold text-sky tracking-wide uppercase">AI-Ready Engineering</span>
               </div>
-          </motion.div>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
+                Build smarter products with{" "}
+                <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">AI-powered</span> engineering.
+              </h1>
+              <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                We design and build custom web applications, AI assistants, and automation systems that help businesses scale faster and work smarter.
+              </p>
+                <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/quote"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-full bg-sky text-primary hover:bg-sky/90 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-sky/20"
+                  >
+                    Get a Quote
+                    <ArrowRight size={18} />
+                  </Link>
+                  <Link
+                    href="/work"
+                    className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full border border-border text-foreground hover:bg-muted/50 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    View our work
+                  </Link>
+                </div>
+            </motion.div>
+
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -117,27 +131,33 @@ export function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
 
-                <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
-                  {cards.map((card, index) => (
-                    <motion.div
-                      key={card.label}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                      className="p-4 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md"
-                    >
-                      <div className="flex items-center gap-2 mb-1">
-                        <card.icon className="w-4 h-4 text-sky" />
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-white/70">
-                          {card.label}
-                        </span>
-                      </div>
-                      <p className="text-lg font-bold text-white">
-                        {card.stat}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
+                  <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-3">
+                    {cards.map((card, index) => (
+                      <motion.div
+                        key={card.label}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                        className="p-3 rounded-xl border border-white/20 bg-black/40 backdrop-blur-xl flex items-center justify-between group/card"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 rounded-lg bg-sky/20 text-sky group-hover/card:bg-sky group-hover/card:text-white transition-colors">
+                            <card.icon size={16} />
+                          </div>
+                          <div>
+                            <p className="text-[10px] font-bold uppercase tracking-wider text-white/50 leading-none mb-1">
+                              {card.label}
+                            </p>
+                            <p className="text-sm font-bold text-white">
+                              {card.stat}
+                            </p>
+                          </div>
+                        </div>
+                        <ArrowUpRight size={14} className="text-white/30 group-hover/card:text-white transition-colors" />
+                      </motion.div>
+                    ))}
+                  </div>
+
               </div>
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-sky to-sky/50 rounded-full blur-2xl opacity-40" />
             </motion.div>

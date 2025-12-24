@@ -2,63 +2,78 @@
 
 
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Award, Briefcase, Layers, Cpu, Eye, Heart } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const benefits = [
-  "Senior engineers with 10+ years of experience",
-  "Proven track record with Fortune 500 clients",
-  "Full-stack capabilities from design to deployment",
-  "AI-first approach to problem solving",
-  "Transparent pricing and communication",
-  "Long-term partnership mindset",
+  {
+    title: "Senior Expertise",
+    description: "Senior engineers with 10+ years of experience leading complex projects.",
+    icon: Award,
+  },
+  {
+    title: "Proven Track Record",
+    description: "Trusted by Fortune 500 clients and high-growth startups globally.",
+    icon: Briefcase,
+  },
+  {
+    title: "End-to-End Delivery",
+    description: "Full-stack capabilities from initial strategy to final deployment.",
+    icon: Layers,
+  },
+  {
+    title: "AI-First Strategy",
+    description: "We leverage AI to build smarter, faster, and more efficient solutions.",
+    icon: Cpu,
+  },
+  {
+    title: "Total Transparency",
+    description: "Clear communication, regular updates, and honest pricing always.",
+    icon: Eye,
+  },
+  {
+    title: "Long-term Partner",
+    description: "We don't just ship and leave; we support your growth long-term.",
+    icon: Heart,
+  },
 ];
 
 export function Benefits() {
   return (
     <Section className="bg-muted/30">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+      <div className="grid lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-3 mb-8">
           <p className="text-sm font-medium uppercase tracking-wider text-sky mb-3">
             Why vAlpha
           </p>
-          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-foreground tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-foreground tracking-tight max-w-3xl">
             We build software that actually works.
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            No bloated teams, no endless meetings. Just experienced engineers who understand your business and deliver results. We&apos;ve helped startups and enterprises alike ship products that scale.
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            No bloated teams, no endless meetings. Just experienced engineers who understand your business and deliver results.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <ul className="space-y-4">
-            {benefits.map((benefit, index) => (
-              <motion.li
-                key={benefit}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.2 + index * 0.05 }}
-                className="flex items-start gap-3"
-              >
-                <div className="mt-1 p-1 rounded-full bg-sky/10">
-                  <Check className="w-4 h-4 text-sky" />
-                </div>
-                <span className="text-foreground">{benefit}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </motion.div>
+        {benefits.map((benefit, index) => (
+          <motion.div
+            key={benefit.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="group p-8 rounded-3xl border border-border bg-card hover:border-sky/50 transition-all duration-300 hover:shadow-xl hover:shadow-sky/5"
+          >
+            <div className="w-12 h-12 rounded-2xl bg-sky/10 flex items-center justify-center text-sky mb-6 group-hover:bg-sky group-hover:text-primary transition-colors">
+              <benefit.icon size={24} />
+            </div>
+            <h3 className="text-xl font-bold font-heading text-foreground mb-3">
+              {benefit.title}
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              {benefit.description}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </Section>
   );
