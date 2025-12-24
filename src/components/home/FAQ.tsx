@@ -5,29 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Section } from "@/components/layout/Section";
-
-const faqs = [
-    {
-      question: "How long does a typical project take?",
-      answer: "2-4 weeks for full completed websites. 6-10 weeks for a fully working SaaS.",
-    },
-  {
-    question: "What is your pricing model?",
-    answer: "We offer both fixed-price and time & materials engagements depending on project scope. Fixed-price works well for well-defined projects, while T&M provides flexibility for evolving requirements. All projects start with a paid discovery phase.",
-  },
-  {
-    question: "Do you provide ongoing support after launch?",
-    answer: "Yes, we offer flexible maintenance and support packages. This includes bug fixes, security updates, performance monitoring, and feature enhancements. We're committed to long-term partnerships, not just one-time deliveries.",
-  },
-  {
-    question: "What makes vAlpha different from other agencies?",
-    answer: "We're a senior-only team with 10+ years of experience each. No hand-offs to junior developers. We specialize in AI-powered applications and have a proven track record with both startups and Fortune 500 companies.",
-  },
-  {
-    question: "Can you work with our existing team?",
-    answer: "Absolutely. We often collaborate with in-house teams, providing additional expertise and capacity. We adapt our workflow to integrate seamlessly with your existing processes, tools, and communication channels.",
-  },
-];
+import { faqs } from "@/lib/content/services";
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

@@ -12,8 +12,8 @@ export function ServicesOverview() {
   return (
     <Section
       eyebrow="What we do"
-      title="Services"
-      description="From concept to deployment, we deliver end-to-end solutions that drive real business outcomes."
+      title="Creative Solutions"
+      description="We blend strategy, design, and technology to build brands that leave a lasting impression."
     >
       <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
         {services.map((service, index) => (

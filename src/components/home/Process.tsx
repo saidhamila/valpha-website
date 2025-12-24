@@ -1,33 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, Palette, Zap, Rocket } from "lucide-react";
+import { Search, Compass, Palette, Sparkles } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const steps = [
   {
     icon: Search,
     title: "Discovery",
-    description: "Deep dive into your goals, audience, and technical requirements.",
+    description: "Uncovering your brand essence, target audience, and strategic objectives.",
     duration: "1-2 Weeks",
   },
   {
-    icon: Palette,
-    title: "Design",
-    description: "Crafting the visual identity and user experience for your product.",
+    icon: Compass,
+    title: "Strategy",
+    description: "Defining the narrative roadmap, brand voice, and market positioning.",
     duration: "2-3 Weeks",
   },
   {
-    icon: Zap,
-    title: "Development",
-    description: "Agile engineering with continuous feedback and testing.",
-    duration: "4-12 Weeks",
+    icon: Palette,
+    title: "Creative",
+    description: "Crafting the visual identity, digital experiences, and brand world.",
+    duration: "3-5 Weeks",
   },
   {
-    icon: Rocket,
-    title: "Launch",
-    description: "Deployment, monitoring, and ongoing optimization for scale.",
-    duration: "Continuous",
+    icon: Sparkles,
+    title: "Production",
+    description: "Bringing the vision to life through high-end content and final launch.",
+    duration: "2-4 Weeks",
   },
 ];
 

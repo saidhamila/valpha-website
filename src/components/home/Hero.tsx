@@ -3,13 +3,13 @@
 import Link from "next/link";
 import NextImage from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, Globe, Shield, ArrowUpRight } from "lucide-react";
+import { Palette, Sparkles, MessageSquare, ArrowUpRight, ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 
 const cards = [
-  { icon: Zap, label: "Performance", stat: "100 Score" },
-  { icon: Globe, label: "Reach", stat: "Global Edge" },
-  { icon: Shield, label: "Security", stat: "Enterprise" },
+  { icon: Palette, label: "Design", stat: "Bespoke" },
+  { icon: Sparkles, label: "Impact", stat: "Brand Led" },
+  { icon: MessageSquare, label: "Strategy", stat: "Storytelling" },
 ];
 
 const floatingShapes = [
@@ -90,12 +90,12 @@ export function Hero() {
                     </span>
                     <span className="text-xs font-semibold text-sky tracking-wide uppercase">Open for Q1 2025</span>
                   </div>
-                      <h1 className="text-6xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
-                      Building the future of <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">Digital</span>.
-                    </h1>
-                  <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                    High-performance software and immersive digital experiences for the next generation of brands.
-                  </p>
+                        <h1 className="text-6xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
+                        Crafting brands that <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">Resonate</span>.
+                      </h1>
+                    <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                      A creative agency dedicated to storytelling, strategic design, and building immersive digital identities.
+                    </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/quote"
@@ -145,8 +145,8 @@ export function Hero() {
                   {/* Tech Image / Background */}
                   <div className="absolute inset-0 opacity-40 mix-blend-overlay">
                     <NextImage 
-                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                      alt="Tech Architecture"
+                      src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000&auto=format&fit=crop"
+                      alt="Creative Design Studio"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
@@ -180,7 +180,7 @@ export function Hero() {
                     ))}
                     <div className="ml-auto hidden xl:flex items-center gap-2">
                       <div className="w-1 h-1 rounded-full bg-sky animate-pulse" />
-                      <span className="text-[9px] font-mono text-white/20 uppercase tracking-[0.2em]">Network Active</span>
+                      <span className="text-[9px] font-mono text-white/20 uppercase tracking-[0.2em]">Studio Live</span>
                     </div>
                   </div>
                 </div>

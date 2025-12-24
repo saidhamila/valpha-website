@@ -1,38 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Target, MousePointer2, Zap, Eye, Heart } from "lucide-react";
+import { Sparkles, Target, Palette, Zap, Eye, Heart, MessageSquare, Globe, Fingerprint } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const benefits = [
   {
-    title: "Technical Excellence",
-    description: "Deep expertise in modern web architectures and performance optimization.",
-    icon: Sparkles,
+    title: "Narrative Excellence",
+    description: "We don't just design; we build stories that resonate and endure in the cultural zeitgeist.",
+    icon: MessageSquare,
   },
   {
     title: "Strategic Partner",
-    description: "We don't just build; we help you navigate the digital landscape.",
+    description: "We align creative output with your business objectives to drive meaningful growth.",
     icon: Target,
   },
   {
-    title: "User-Centric Design",
-    description: "Interfaces that don't just look good, but feel intuitive and purposeful.",
-    icon: MousePointer2,
+    title: "Immersive Design",
+    description: "Bespoke digital experiences that blend aesthetic beauty with seamless functionality.",
+    icon: Palette,
   },
   {
-    title: "Scalable Solutions",
-    description: "Systems designed to grow with your business, from MVP to enterprise.",
-    icon: Zap,
+    title: "Brand Coherence",
+    description: "Ensuring every touchpoint reflects your brand's unique essence and values.",
+    icon: Fingerprint,
   },
   {
-    title: "Data-Driven Approach",
-    description: "Leveraging analytics and user feedback to inform every decision.",
-    icon: Eye,
+    title: "Cultural Relevance",
+    description: "Keeping your brand at the forefront of trends while maintaining timeless appeal.",
+    icon: Globe,
   },
   {
-    title: "Ongoing Support",
-    description: "Continuous monitoring and updates to keep your project ahead.",
+    title: "Emotional Connection",
+    description: "Creating designs that evoke feelings and build lasting loyalty with your audience.",
     icon: Heart,
   },
 ];
@@ -48,9 +48,9 @@ export function Benefits() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-foreground tracking-tight max-w-3xl">
             Why Partner with <span className="text-sky">vAlpha?</span>
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            We bridge the gap between complex engineering and human-centered design.
-          </p>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              We bridge the gap between strategic brand storytelling and human-centered design.
+            </p>
         </div>
 
         {benefits.map((benefit, index) => (

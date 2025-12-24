@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 import { values } from "@/lib/content/team";
-import { Shield, Sparkles, Zap, Heart } from "lucide-react";
+import { Sparkles, Target, MessageSquare, Heart } from "lucide-react";
 
-const icons = [Shield, Sparkles, Zap, Heart];
+const icons = [Sparkles, Target, MessageSquare, Heart];
 
 export function CoreValues() {
   return (

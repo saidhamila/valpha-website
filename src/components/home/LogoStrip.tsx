@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 
 const logos = [
+  "Figma",
+  "Adobe CC",
+  "Framer",
+  "Sanity",
+  "Webflow",
+  "Shopify",
   "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "Framer Motion",
-  "Supabase",
-  "Stripe",
 ];
 
 export function LogoStrip() {

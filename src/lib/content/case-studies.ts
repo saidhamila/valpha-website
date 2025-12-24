@@ -24,95 +24,96 @@ export interface CaseStudy {
   featured?: boolean;
 }
 
-export const industries = ["All", "FinTech", "HealthTech", "E-commerce", "SaaS", "Fitness"];
+export const industries = ["All", "Fashion", "Lifestyle", "Technology", "Real Estate", "Hospitality"];
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "elitegym",
-    slug: "elite-gym-digital-transformation",
-    title: "EliteGYM Digital Platform",
-    shortDescription: "A premium digital experience for a high-end fitness facility, featuring real-time class booking and member dashboard.",
-    client: "EliteGYM",
-    industry: "Fitness",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Stripe"],
-    challenge: "EliteGYM needed a premium digital experience to match their high-end physical facilities and streamline member bookings.",
-    solution: "We built a high-performance Next.js platform with real-time class scheduling and a custom member dashboard.",
-    outcome: "A 40% increase in online bookings and a significant improvement in member engagement through the digital portal.",
+    id: "luminary-fashion",
+    slug: "luminary-fashion-branding",
+    title: "Luminary Fashion Brand Identity",
+    shortDescription: "A complete visual and narrative overhaul for a high-end sustainable fashion house.",
+    client: "Luminary",
+    industry: "Fashion",
+    stack: ["Figma", "Adobe CC", "Next.js", "Sanity CMS", "Shopify"],
+    challenge: "Luminary needed a brand identity that reflected their commitment to sustainable luxury while appealing to a global, design-conscious audience.",
+    solution: "We developed a minimalist yet soulful identity system, complemented by a cinematic digital flagship that prioritizes storytelling and texture.",
+    outcome: "A 150% increase in brand sentiment and a record-breaking launch for their digital flagship store.",
     content: `
 ## The Challenge
 
-EliteGYM operates premium fitness facilities but their digital presence didn't match the quality of their physical spaces. Members struggled with an outdated booking system and the team needed better insights into class attendance.
+Luminary fashion house was at a crossroads. While their physical collections were world-class, their digital presence and brand narrative were fragmented. They needed a cohesive identity that could bridge the gap between their artisanal roots and their global future.
 
 ## Our Approach
 
-We worked closely with the EliteGYM team to understand their members' needs and pain points. Through user research and stakeholder interviews, we identified key opportunities to improve the digital experience.
+We deep-dived into the materials, the process, and the philosophy behind Luminary. Our goal was to translate the 'tactile' nature of their clothing into a 'digital' experience that felt just as luxurious.
 
-### Key Features Built
+### Creative Solutions
 
-- **Real-time Class Booking** - Members can see live availability and book instantly
-- **Member Dashboard** - Personalized view of upcoming classes, progress tracking, and membership details
-- **Admin Panel** - Staff can manage schedules, track attendance, and analyze trends
-- **Mobile-First Design** - Optimized for on-the-go booking from any device
+- **Visual Identity System** - A bespoke logotype and color palette inspired by natural dyes and architectural forms.
+- **Narrative Strategy** - Shifting the brand story from 'what we make' to 'why it matters'.
+- **Digital Flagship** - A high-performance web experience that uses immersive video and large-scale typography to showcase collections.
+- **Content Direction** - Art directing a series of brand films that capture the essence of 'Quiet Luxury'.
 
 ## The Results
 
-The new platform launched to overwhelmingly positive feedback from both members and staff. The intuitive booking flow reduced friction and increased engagement across the board.
+The rebranding was met with international acclaim, positioning Luminary as a leader in the sustainable luxury space. The digital flagship has become their primary revenue driver, exceeding all initial projections.
     `,
     metrics: [
-      { label: "Booking Increase", value: "40%" },
-      { label: "Mobile Traffic", value: "+120%" },
-      { label: "Site Speed", value: "98/100" }
+      { label: "Direct Sales", value: "+85%" },
+      { label: "Brand Sentiment", value: "+150%" },
+      { label: "Global Reach", value: "45+ Countries" }
     ],
     images: [
-      { alt: "EliteGYM Dashboard", caption: "Member dashboard with upcoming classes" },
-      { alt: "Class Booking Flow", caption: "Streamlined booking experience" },
-      { alt: "Mobile View", caption: "Responsive design for mobile users" }
+      { alt: "Luminary Visual Identity", caption: "Bespoke typography and identity system" },
+      { alt: "Digital Flagship Experience", caption: "Immersive e-commerce journey" },
+      { alt: "Brand Campaign", caption: "Art directed lifestyle photography" }
     ],
-    tags: ["Next.js", "Real-time API", "UX Design"],
+    tags: ["Branding", "Digital Design", "Storytelling"],
     featured: true
   },
   {
-    id: "futurescale",
-    slug: "futurescale-saas-platform",
-    title: "FutureScale SaaS Platform",
-    shortDescription: "Migrating a legacy system to scalable microservices architecture supporting 250k+ concurrent users.",
-    client: "FutureScale",
-    industry: "SaaS",
-    stack: ["React", "Node.js", "Kubernetes", "AWS", "Redis"],
-    challenge: "Scaling their legacy architecture to support 100k+ concurrent users while maintaining low latency.",
-    solution: "Complete migration to a microservices architecture with a modern React frontend and globally distributed backend.",
-    outcome: "Successfully scaled to 250k users with zero downtime and 50% reduction in infrastructure costs.",
+    id: "nova-tech",
+    slug: "nova-tech-narrative",
+    title: "Nova Tech Identity & Experience",
+    shortDescription: "Humanizing a complex AI startup through strategic storytelling and accessible design.",
+    client: "Nova Tech",
+    industry: "Technology",
+    stack: ["Figma", "Framer", "React", "Three.js", "Tailwind CSS"],
+    challenge: "Nova Tech struggled to explain their complex AI infrastructure to non-technical stakeholders and potential partners.",
+    solution: "We transformed their technical jargon into a human-centric brand narrative, supported by an interactive web experience that visualizes data flows.",
+    outcome: "Successfully secured $25M in Series B funding following the brand relaunch and new investor platform.",
     content: `
 ## The Challenge
 
-FutureScale's platform was built on a monolithic architecture that was struggling under increasing user load. Response times were degrading and the development team found it difficult to ship new features quickly.
+Nova Tech had incredible technology but a serious communication problem. Their brand felt cold and overly technical, making it difficult for investors and partners to grasp the human impact of their AI solutions.
 
 ## Our Approach
 
-We conducted a thorough audit of the existing system and designed a phased migration plan that minimized risk while maximizing the benefits of the new architecture.
+Our strategy was to 'humanize the machine'. We focused on the outcomes, the people, and the future Nova Tech was building, rather than just the code.
 
-### Migration Strategy
+### Creative Solutions
 
-- **Phase 1** - Set up new infrastructure and CI/CD pipelines
-- **Phase 2** - Extract core services into independent microservices
-- **Phase 3** - Migrate frontend to React with improved UX
-- **Phase 4** - Complete data migration with zero downtime
+- **Brand Narrative Framework** - Developing a clear, emotional 'Hero's Journey' for the brand.
+- **Interactive Data Visualization** - Using Three.js to create beautiful, understandable representations of their AI processes.
+- **Visual Language** - A vibrant, optimistic color palette and organic shapes that contrast with the technical nature of the product.
+- **Investor Platform** - A secure, high-end portal designed to guide potential investors through the company's vision and performance.
 
 ## The Results
 
-The new platform handles 2.5x more users with better performance and lower costs. The microservices architecture enables the team to deploy updates multiple times per day.
+The new identity gave Nova Tech the confidence and clarity to lead their Series B funding round. The brand is now recognized not just for its technology, but for its vision.
     `,
     metrics: [
-      { label: "User Capacity", value: "+150%" },
-      { label: "Latency", value: "-60%" },
-      { label: "Uptime", value: "99.99%" }
+      { label: "Funding Secured", value: "$25M" },
+      { label: "Partner Leads", value: "+200%" },
+      { label: "Time on Site", value: "4:30 Avg" }
     ],
     images: [
-      { alt: "Architecture Diagram", caption: "New microservices architecture" },
-      { alt: "Performance Metrics", caption: "Real-time monitoring dashboard" },
-      { alt: "User Interface", caption: "Redesigned user interface" }
+      { alt: "Nova Brand World", caption: "A vibrant and optimistic visual language" },
+      { alt: "Interactive Visualization", caption: "Visualizing complex AI data flows" },
+      { alt: "Investor Portal", caption: "Strategic design for high-stakes communication" }
     ],
-    tags: ["Cloud Arch", "Microservices", "React"],
+    tags: ["Strategy", "Interactive", "Identity"],
     featured: false
   }
 ];
+

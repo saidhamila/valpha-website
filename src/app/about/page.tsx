@@ -7,7 +7,7 @@ import { CTAStrip } from "@/components/home/CTAStrip";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn about vAlpha—our mission, values, and the team behind our AI-powered software solutions.",
+  description: "Learn about vAlpha—our mission, values, and the team behind our creative agency and brand-led solutions.",
 };
 
 export default function AboutPage() {
