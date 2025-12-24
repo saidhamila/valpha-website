@@ -46,7 +46,7 @@ export const services: Service[] = [
     heroDescription: "We craft stunning, high-performance websites that convert visitors into customers. Using cutting-edge technologies like React and Next.js, we build blazing-fast experiences.",
     icon: Globe,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    pricing: "Starts at $5k",
+    pricing: "Starts at $2k",
     features: [
       { title: "Custom React/Next.js Applications", description: "Tailored solutions built with modern frameworks for optimal performance and developer experience." },
       { title: "Performance Optimization", description: "Lightning-fast load times through code splitting, lazy loading, and advanced caching strategies." },
@@ -76,7 +76,7 @@ export const services: Service[] = [
     heroDescription: "Transform your vision into a market-ready SaaS product. We handle everything from architecture design to deployment, ensuring your platform can scale with your success.",
     icon: Rocket,
     image: "https://images.unsplash.com/photo-1551288049-bbbda5366991?q=80&w=2070&auto=format&fit=crop",
-    pricing: "Starts at $10k",
+    pricing: "Starts at $8k",
     features: [
       { title: "Multi-tenant Architecture", description: "Efficient data isolation and resource sharing for cost-effective scaling." },
       { title: "Subscription Management", description: "Integrated billing with Stripe, usage tracking, and plan management." },
@@ -106,7 +106,7 @@ export const services: Service[] = [
     heroDescription: "Harness the power of artificial intelligence to automate workflows, enhance user experiences, and unlock new possibilities for your business with custom AI solutions.",
     icon: Brain,
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
-    pricing: "Starts at $8k",
+    pricing: "Starts at $5k",
     features: [
       { title: "LLM Implementation", description: "Custom integrations with OpenAI, Anthropic, or open-source models." },
       { title: "Custom AI Agents", description: "Autonomous agents that handle complex tasks and decision-making." },
@@ -136,7 +136,7 @@ export const services: Service[] = [
     heroDescription: "Streamline your operations by connecting all your business systems. We create robust integrations that enable seamless data flow and automated processes.",
     icon: Layers,
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
-    pricing: "Starts at $6k",
+    pricing: "Starts at $4k",
     features: [
       { title: "Legacy System Modernization", description: "Breathing new life into existing systems with modern interfaces." },
       { title: "Third-party API Integration", description: "Connecting with payment processors, CRMs, ERPs, and more." },
