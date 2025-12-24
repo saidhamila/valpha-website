@@ -103,9 +103,9 @@ export function Header() {
             <span className="text-xl font-bold font-heading tracking-tight text-foreground">vAlpha</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-2 xl:gap-4">
+              {navLinks.map((link) => (
               link.hasDropdown ? (
                 <div 
                   key={link.label} 
@@ -185,40 +185,40 @@ export function Header() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-3 pl-2 border-l border-border/50">
-            <ThemeToggle />
-            <Link
-              href="/quote"
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 active:scale-95"
-            >
-              Get a Quote
-            </Link>
-          </div>
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6 pl-2 border-l border-border/50">
+              <ThemeToggle />
+              <Link
+                href="/quote"
+                className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-full bg-sky text-primary transition-all hover:bg-sky/90 active:scale-95 shadow-lg shadow-sky/20"
+              >
+                Get a Quote
+              </Link>
+            </div>
 
-          {/* Mobile Actions */}
-          <div className="flex md:hidden items-center gap-2">
-            <ThemeToggle />
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-foreground"
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </nav>
-      </Container>
+            {/* Mobile Actions */}
+            <div className="flex lg:hidden items-center gap-2">
+              <ThemeToggle />
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 text-foreground"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </nav>
+        </Container>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
-          >
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden bg-background border-b border-border overflow-hidden"
+            >
             <Container className="py-6">
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (
