@@ -157,22 +157,34 @@ export function Hero() {
                 {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col p-8 pt-16">
                   {/* Mock Terminal/Log */}
-                  <div className="flex-1 bg-black/40 rounded-xl border border-white/5 p-4 font-mono text-[10px] text-white/40 overflow-hidden">
-                    <div className="flex items-center gap-2 mb-3 border-b border-white/5 pb-2">
+                  <div className="flex-1 bg-black/60 rounded-xl border border-white/10 p-4 font-mono text-[10px] text-white/70 overflow-hidden shadow-inner">
+                    <div className="flex items-center gap-2 mb-3 border-b border-white/10 pb-2">
                       <div className="w-2 h-2 rounded-full bg-sky animate-pulse" />
-                      <span className="text-white/60">system.log</span>
+                      <span className="text-white/80 font-semibold tracking-tight">vAlpha_deploy.log</span>
                     </div>
-                    <div className="space-y-1">
-                      <p className="text-sky/60">{"[INFO] Initializing VAlpha Core v2.4.0..."}</p>
-                      <p>{"[SUCCESS] Database connection established"}</p>
-                      <p>{"[INFO] Deploying AI microservices..."}</p>
-                      <motion.p
-                        animate={{ opacity: [0, 1, 0] }}
-                        transition={{ duration: 1, repeat: Infinity }}
-                        className="text-emerald-400"
-                      >
-                        {"> Ready for production"}
-                      </motion.p>
+                    <div className="space-y-1.5">
+                      <div className="flex gap-2">
+                        <span className="text-sky/80">[INFO]</span>
+                        <span>Initializing vAlpha_Core_v2.4...</span>
+                      </div>
+                      <div className="flex gap-2">
+                        <span className="text-emerald-400/80">[OK]</span>
+                        <span>Node clusters operational</span>
+                      </div>
+                      <div className="flex gap-2">
+                        <span className="text-amber-400/80">[WARN]</span>
+                        <span className="italic opacity-80">Syncing AI training weights...</span>
+                      </div>
+                      <div className="flex gap-2 mt-2 pt-2 border-t border-white/5">
+                        <span className="text-sky animate-pulse">{">"}</span>
+                        <motion.span
+                          animate={{ opacity: [1, 0, 1] }}
+                          transition={{ duration: 0.8, repeat: Infinity }}
+                          className="text-emerald-400 font-bold"
+                        >
+                          Ready for production_
+                        </motion.span>
+                      </div>
                     </div>
                   </div>
 
