@@ -33,9 +33,9 @@ export function Footer() {
             <div className="lg:col-span-2">
               <Link href="/" className="flex items-center gap-2 mb-4">
                   <img 
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/channels4_profile-1766525650837.jpg?width=8000&height=8000&resize=contain" 
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Untitled-design-13-1766536595488.png?width=8000&height=8000&resize=contain" 
                     alt="vAlpha Logo" 
-                    className="h-10 w-auto invert mix-blend-screen contrast-[1.1] brightness-[1.05]"
+                    className="h-10 w-auto invert"
                   />
                 <span className="text-2xl font-bold font-heading tracking-tight text-white">vAlpha</span>
               </Link>
