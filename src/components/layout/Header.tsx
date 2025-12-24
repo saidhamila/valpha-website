@@ -17,7 +17,6 @@ const serviceLinks = [
 ];
 
 const companyLinks = [
-  { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -25,6 +24,7 @@ const companyLinks = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasDropdown: true, dropdownLinks: serviceLinks },
+  { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
   { href: "/company", label: "Company", hasDropdown: true, dropdownLinks: companyLinks },
 ];
