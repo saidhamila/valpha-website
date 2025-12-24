@@ -1,4 +1,4 @@
-import { Dumbbell, Users, Utensils, Zap, Trophy, Target } from "lucide-react";
+import { Code2, Rocket, Brain, Layers, Globe, Smartphone } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface Service {
@@ -12,59 +12,59 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "personal-training",
-    slug: "personal-training",
-    title: "Personal Training",
-    description: "One-on-one sessions tailored to your specific goals, from weight loss to muscle gain and athletic performance.",
-    icon: Dumbbell,
+    id: "web-development",
+    slug: "web-development",
+    title: "Web Development",
+    description: "High-performance, accessible, and scalable web applications built with modern technologies.",
+    icon: Globe,
     features: [
-      "Customized Workout Plans",
-      "Nutritional Guidance",
-      "Regular Progress Tracking",
-      "Expert Form Correction",
-      "Motivation & Accountability"
+      "Custom React/Next.js Applications",
+      "Performance Optimization",
+      "Headless CMS Integration",
+      "Progressive Web Apps (PWA)",
+      "Accessibility (a11y) Compliance"
     ]
   },
   {
-    id: "group-fitness",
-    slug: "group-fitness",
-    title: "Group Classes",
-    description: "High-energy group sessions including HIIT, Yoga, and Strength training led by expert instructors.",
-    icon: Users,
+    id: "saas-development",
+    slug: "saas-development",
+    title: "SaaS Development",
+    description: "End-to-end product development from initial architecture to scalable cloud deployment.",
+    icon: Rocket,
     features: [
-      "Diverse Class Schedule",
-      "Community Support",
-      "Certified Instructors",
-      "All Fitness Levels Welcome",
-      "Modern Equipment"
+      "Multi-tenant Architecture",
+      "Subscription Management",
+      "API Design & Development",
+      "Real-time Dashboards",
+      "Cloud Infrastructure Setup"
     ]
   },
   {
-    id: "nutrition-coaching",
-    slug: "nutrition-coaching",
-    title: "Nutrition Coaching",
-    description: "Scientific approach to nutrition to fuel your workouts and optimize your health and recovery.",
-    icon: Utensils,
+    id: "ai-solutions",
+    slug: "ai-solutions",
+    title: "AI Integration",
+    description: "Integrating advanced AI capabilities to automate workflows and enhance user experiences.",
+    icon: Brain,
     features: [
-      "Personalized Meal Plans",
-      "Macro Tracking Support",
-      "Supplement Guidance",
-      "Lifestyle Integration",
-      "Bi-weekly Consultations"
+      "LLM Implementation",
+      "Custom AI Agents",
+      "Natural Language Processing",
+      "Automated Workflows",
+      "Data Analysis & Visualization"
     ]
   },
   {
-    id: "performance-lab",
-    slug: "performance-lab",
-    title: "Performance Lab",
-    description: "Advanced testing and recovery services to push your limits and prevent injuries.",
-    icon: Zap,
+    id: "systems-integration",
+    slug: "systems-integration",
+    title: "Systems Integration",
+    description: "Connecting disparate systems into a unified, high-performance digital ecosystem.",
+    icon: Layers,
     features: [
-      "Body Composition Analysis",
-      "VO2 Max Testing",
-      "Recovery Zone Access",
-      "Injury Prevention",
-      "Mobility Assessments"
+      "Legacy System Modernization",
+      "Third-party API Integration",
+      "Database Optimization",
+      "Security Audits",
+      "Continuous Integration/Deployment"
     ]
   }
 ];

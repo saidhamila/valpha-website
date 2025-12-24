@@ -15,41 +15,41 @@ export interface CaseStudy {
   featured?: boolean;
 }
 
-export const industries = ["All", "Weight Loss", "Sports Performance", "General Fitness", "Bodybuilding"];
+export const industries = ["All", "FinTech", "HealthTech", "E-commerce", "SaaS", "Fitness"];
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "sarah-jenkins",
-    slug: "weight-loss-transformation",
-    title: "Sarah's 12-Month Transformation",
-    client: "Sarah Jenkins",
-    industry: "Weight Loss",
-    challenge: "Sarah struggled with consistency and hit a plateau in her fitness journey while managing a high-stress corporate job.",
-    solution: "We implemented a sustainable nutrition plan and a 4-day-a-week strength training program focused on progressive overload.",
-    outcome: "Sarah completely transformed her physique and mindset, achieving her goal weight while gaining significant lean muscle.",
+    id: "elitegym",
+    slug: "elite-gym-digital-transformation",
+    title: "EliteGYM Digital Platform",
+    client: "EliteGYM",
+    industry: "Fitness",
+    challenge: "EliteGYM needed a premium digital experience to match their high-end physical facilities and streamline member bookings.",
+    solution: "We built a high-performance Next.js platform with real-time class scheduling and a custom member dashboard.",
+    outcome: "A 40% increase in online bookings and a significant improvement in member engagement through the digital portal.",
     metrics: [
-      { label: "Weight Lost", value: "45lbs" },
-      { label: "Body Fat %", value: "-12%" },
-      { label: "Strength Inc.", value: "150%" }
+      { label: "Booking Increase", value: "40%" },
+      { label: "Mobile Traffic", value: "+120%" },
+      { label: "Site Speed", value: "98/100" }
     ],
-    tags: ["Personal Training", "Nutrition", "Weight Loss"],
+    tags: ["Next.js", "Real-time API", "UX Design"],
     featured: true
   },
   {
-    id: "mike-thompson",
-    slug: "athletic-performance",
-    title: "Elite Performance for Pro Athletes",
-    client: "Mike Thompson",
-    industry: "Sports Performance",
-    challenge: "A professional athlete looking to increase explosive power and reduce injury risk during the off-season.",
-    solution: "Advanced plyometric training combined with a strict recovery protocol and performance testing.",
-    outcome: "Mike achieved his career-best vertical jump and reported zero injuries throughout the following season.",
+    id: "futurescale",
+    slug: "futurescale-saas-platform",
+    title: "FutureScale SaaS Platform",
+    client: "FutureScale",
+    industry: "SaaS",
+    challenge: "Scaling their legacy architecture to support 100k+ concurrent users while maintaining low latency.",
+    solution: "Complete migration to a microservices architecture with a modern React frontend and globally distributed backend.",
+    outcome: "Successfully scaled to 250k users with zero downtime and 50% reduction in infrastructure costs.",
     metrics: [
-      { label: "Vertical Jump", value: "+6 inches" },
-      { label: "Sprinting Speed", value: "+15%" },
-      { label: "Injury Rate", value: "0%" }
+      { label: "User Capacity", value: "+150%" },
+      { label: "Latency", value: "-60%" },
+      { label: "Uptime", value: "99.99%" }
     ],
-    tags: ["Performance Lab", "Athletic Training", "Recovery"],
+    tags: ["Cloud Arch", "Microservices", "React"],
     featured: false
   }
 ];

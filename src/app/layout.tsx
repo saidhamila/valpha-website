@@ -9,8 +9,8 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "EliteGYM | Premium Fitness & Performance",
-  description: "Join EliteGYM for world-class personal training, group classes, and state-of-the-art facilities designed to transform your body and mind.",
+  title: "vAlpha | Creative Digital Agency",
+  description: "High-performance software and immersive digital experiences for the next generation of brands.",
 };
 
 export default function RootLayout({

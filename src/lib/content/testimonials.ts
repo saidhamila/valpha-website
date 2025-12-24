@@ -9,20 +9,20 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    content: "EliteGYM changed my life. The trainers aren't just experts; they're mentors who genuinely care about your progress. I've never felt stronger.",
-    author: "David Chen",
-    role: "Member for 2 years"
+    content: "vAlpha transformed our legacy systems into a modern, high-performance platform. Their technical depth and creative approach are unmatched.",
+    author: "Sarah Jenkins",
+    role: "CTO, FutureScale"
   },
   {
     id: "2",
-    content: "The facilities are world-class, but it's the community that keeps me coming back. It's the most supportive environment I've ever trained in.",
-    author: "Elena Rodriguez",
-    role: "Group Fitness Regular"
+    content: "The level of attention to detail and performance optimization they brought to our SaaS product was exactly what we needed to scale.",
+    author: "Michael Chen",
+    role: "Founder, SaaSFlow"
   },
   {
     id: "3",
-    content: "The nutrition coaching was the missing piece for me. I finally understood how to fuel my body without feeling restricted.",
-    author: "Marcus Thorne",
-    role: "Performance Lab Client"
+    content: "They didn't just build an app; they helped us redefine our digital strategy. A true partner in every sense of the word.",
+    author: "Emily Rodriguez",
+    role: "Product Director, InnovateHub"
   }
 ];

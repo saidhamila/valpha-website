@@ -1,6 +1,5 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 import { Search, Palette, Zap, Rocket } from "lucide-react";
 import { Section } from "@/components/layout/Section";
@@ -8,27 +7,27 @@ import { Section } from "@/components/layout/Section";
 const steps = [
   {
     icon: Search,
-    title: "Assessment",
-    description: "A comprehensive review of your current fitness level, goals, and any physical limitations.",
-    duration: "1 Session",
+    title: "Discovery",
+    description: "Deep dive into your goals, audience, and technical requirements.",
+    duration: "1-2 Weeks",
   },
   {
     icon: Palette,
-    title: "Planning",
-    description: "Designing your custom workout and nutrition strategy tailored to your lifestyle.",
-    duration: "1 Week",
+    title: "Design",
+    description: "Crafting the visual identity and user experience for your product.",
+    duration: "2-3 Weeks",
   },
   {
     icon: Zap,
-    title: "Execution",
-    description: "Hit the floor with your plan and expert guidance from our elite coaching staff.",
-    duration: "Continuous",
+    title: "Development",
+    description: "Agile engineering with continuous feedback and testing.",
+    duration: "4-12 Weeks",
   },
   {
     icon: Rocket,
-    title: "Transformation",
-    description: "Witness the results of your hard work as you reach and exceed your fitness goals.",
-    duration: "Lifetime",
+    title: "Launch",
+    description: "Deployment, monitoring, and ongoing optimization for scale.",
+    duration: "Continuous",
   },
 ];
 

@@ -1,16 +1,15 @@
 "use client";
 
-
 import Link from "next/link";
 import NextImage from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, TrendingUp, Shield, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Zap, Globe, Shield, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 
 const cards = [
-  { icon: Zap, label: "Strength", stat: "Elite Power" },
-  { icon: TrendingUp, label: "Progress", stat: "Data-Driven" },
-  { icon: Shield, label: "Community", stat: "Supportive" },
+  { icon: Zap, label: "Performance", stat: "100 Score" },
+  { icon: Globe, label: "Reach", stat: "Global Edge" },
+  { icon: Shield, label: "Security", stat: "Enterprise" },
 ];
 
 const floatingShapes = [
@@ -89,13 +88,13 @@ export function Hero() {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
                     </span>
-                    <span className="text-xs font-semibold text-sky tracking-wide uppercase">Elite Performance</span>
+                    <span className="text-xs font-semibold text-sky tracking-wide uppercase">Open for Q1 2025</span>
                   </div>
                   <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
-                    Transform your body at the <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">EliteGYM</span>.
+                    Building the future of <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">Digital</span>.
                   </h1>
                   <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                    A premium fitness destination dedicated to building elite athletes, high-impact transformations, and immersive training experiences that push your limits.
+                    High-performance software and immersive digital experiences for the next generation of brands.
                   </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Link
@@ -191,23 +190,23 @@ export function Hero() {
                   <Zap size={20} />
                 </div>
                 <div>
-                    <p className="text-[10px] font-bold text-muted-foreground uppercase">Design Status</p>
-                    <p className="text-sm font-bold text-foreground">Inspired</p>
-                  </div>
-                </motion.div>
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase">System Status</p>
+                  <p className="text-sm font-bold text-foreground">Operational</p>
+                </div>
+              </motion.div>
 
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-6 -left-6 p-4 rounded-2xl bg-black border border-white/10 shadow-2xl z-20 hidden xl:flex items-center gap-4"
-                >
-                  <div className="w-10 h-10 rounded-full bg-sky/20 flex items-center justify-center text-sky">
-                    <Shield size={20} />
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-bold text-white/50 uppercase">Creative</p>
-                    <p className="text-sm font-bold text-white">Visionary</p>
-                  </div>
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -bottom-6 -left-6 p-4 rounded-2xl bg-black border border-white/10 shadow-2xl z-20 hidden xl:flex items-center gap-4"
+              >
+                <div className="w-10 h-10 rounded-full bg-sky/20 flex items-center justify-center text-sky">
+                  <ArrowUpRight size={20} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-white/50 uppercase">Network</p>
+                  <p className="text-sm font-bold text-white">10Gbps Edge</p>
+                </div>
               </motion.div>
 
               {/* Decorative Background Glows */}

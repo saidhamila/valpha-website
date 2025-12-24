@@ -1,15 +1,14 @@
 "use client";
 
-
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Members Transformed" },
-  { value: 15, suffix: "+", label: "Expert Coaches" },
-  { value: 24, suffix: "/7", label: "Gym Access" },
-  { value: 98, suffix: "%", label: "Success Rate" },
+  { value: 50, suffix: "+", label: "Projects Delivered" },
+  { value: 12, suffix: "M+", label: "Lines of Code" },
+  { value: 95, suffix: "%", label: "Client Retention" },
+  { value: 10, suffix: "ms", label: "API Response Time" },
 ];
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
@@ -53,20 +52,20 @@ export function Stats() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky/5 via-transparent to-transparent" />
       
       <Container className="relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <p className="text-sm font-medium uppercase tracking-wider text-sky mb-3">
-              Our Impact
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-foreground tracking-tight">
-              Creativity measured in results
-            </h2>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <p className="text-sm font-medium uppercase tracking-wider text-sky mb-3">
+            Our Impact
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-foreground tracking-tight">
+            Creativity measured in results
+          </h2>
+        </motion.div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat, index) => (

@@ -1,39 +1,38 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 import { Sparkles, Target, MousePointer2, Zap, Eye, Heart } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const benefits = [
   {
-    title: "Expert Trainers",
-    description: "Certified professionals dedicated to your success and safety.",
+    title: "Technical Excellence",
+    description: "Deep expertise in modern web architectures and performance optimization.",
     icon: Sparkles,
   },
   {
-    title: "24/7 Access",
-    description: "Work out on your schedule with round-the-clock gym access.",
+    title: "Strategic Partner",
+    description: "We don't just build; we help you navigate the digital landscape.",
     icon: Target,
   },
   {
-    title: "Elite Community",
-    description: "Train alongside like-minded individuals who push you to be better.",
+    title: "User-Centric Design",
+    description: "Interfaces that don't just look good, but feel intuitive and purposeful.",
     icon: MousePointer2,
   },
   {
-    title: "Modern Facilities",
-    description: "State-of-the-art equipment and clean, spacious workout zones.",
+    title: "Scalable Solutions",
+    description: "Systems designed to grow with your business, from MVP to enterprise.",
     icon: Zap,
   },
   {
-    title: "Proven Results",
-    description: "Scientific training methods that deliver measurable transformations.",
+    title: "Data-Driven Approach",
+    description: "Leveraging analytics and user feedback to inform every decision.",
     icon: Eye,
   },
   {
-    title: "Supportive Culture",
-    description: "A welcoming environment for all fitness levels and backgrounds.",
+    title: "Ongoing Support",
+    description: "Continuous monitoring and updates to keep your project ahead.",
     icon: Heart,
   },
 ];
@@ -46,12 +45,12 @@ export function Benefits() {
           <p className="text-sm font-medium uppercase tracking-wider text-sky mb-3">
             Creative Edge
           </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-foreground tracking-tight max-w-3xl">
-              Why Choose <span className="text-sky">EliteGYM?</span>
-            </h2>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              We provide more than just a place to workout. We provide the tools, the knowledge, and the community you need to succeed.
-            </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-foreground tracking-tight max-w-3xl">
+            Why Partner with <span className="text-sky">vAlpha?</span>
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            We bridge the gap between complex engineering and human-centered design.
+          </p>
         </div>
 
         {benefits.map((benefit, index) => (
