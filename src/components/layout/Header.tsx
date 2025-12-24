@@ -18,7 +18,6 @@ const serviceLinks = [
 
 const companyLinks = [
   { href: "/contact", label: "Contact" },
-  { href: "/quote", label: "Get a Quote" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
   { href: "/about", label: "About" },
