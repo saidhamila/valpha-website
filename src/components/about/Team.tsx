@@ -24,7 +24,7 @@ export function Team() {
             className="relative overflow-hidden rounded-3xl border border-border bg-card hover:border-sky/30 transition-all group"
           >
             <div className="p-8 sm:p-10">
-              <div className="flex flex-col sm:flex-row gap-8 items-center sm:items-start text-center sm:text-left">
+                <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start text-center lg:text-left">
                 <div className="relative shrink-0">
                   <div className="absolute -inset-2 bg-gradient-to-br from-sky/30 to-sky/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-sky/10 group-hover:ring-sky/30 transition-all">

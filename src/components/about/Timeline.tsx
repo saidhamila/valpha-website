@@ -30,7 +30,7 @@ export function Timeline() {
               
               <div className="absolute left-4 sm:left-1/2 w-3 h-3 rounded-full bg-sky border-4 border-background sm:-translate-x-1/2" />
 
-              <div className="ml-12 sm:ml-0 sm:w-1/2 p-6 rounded-2xl border border-border bg-card">
+                <div className="ml-10 sm:ml-0 sm:w-1/2 p-6 rounded-2xl border border-border bg-card">
                 <span className="text-sm font-bold text-sky">{item.year}</span>
                 <h3 className="text-lg font-semibold font-heading text-foreground mt-1">
                   {item.title}

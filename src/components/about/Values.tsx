@@ -10,7 +10,7 @@ export function Values() {
       eyebrow="Our Values"
       title="What we believe in"
     >
-      <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {values.map((value, index) => (
           <motion.div
             key={value.title}
