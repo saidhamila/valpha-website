@@ -33,13 +33,16 @@ export function ServicesOverview() {
                 <div className="absolute -inset-px bg-gradient-to-br from-sky/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Image Section */}
-                <div className="relative aspect-[16/11] overflow-hidden">
-                  <NextImage 
-                    src={service.image!}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
+                  <div className="relative aspect-[16/11] overflow-hidden">
+                    {service.image && (
+                      <NextImage 
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                      />
+                    )}
                   
                   {/* Image Overlays */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />

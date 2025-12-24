@@ -142,15 +142,16 @@ export function Hero() {
                   className="absolute -top-20 -right-20 w-64 h-64 bg-sky/30 rounded-full blur-[80px]" 
                 />
 
-                {/* Tech Image / Background */}
-                <div className="absolute inset-0 opacity-40 mix-blend-overlay">
-                  <NextImage 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                    alt="Tech Architecture"
-                    fill
-                    className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
-                  />
-                </div>
+                  {/* Tech Image / Background */}
+                  <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+                    <NextImage 
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+                      alt="Tech Architecture"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                    />
+                  </div>
 
                 {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col p-8 pt-16">
