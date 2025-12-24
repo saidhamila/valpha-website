@@ -16,21 +16,25 @@ const serviceLinks = [
   { href: "/services/api-integration", label: "API & Systems Integration", icon: Plug },
 ];
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services", hasDropdown: true },
+const companyLinks = [
   { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services", hasDropdown: true, dropdownLinks: serviceLinks },
+  { href: "/company", label: "Company", hasDropdown: true, dropdownLinks: companyLinks },
+];
+
 export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileOpenDropdowns, setMobileOpenDropdowns] = useState<Record<string, boolean>>({});
   const dropdownRef = useRef<HTMLDivElement>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -44,8 +48,8 @@ export function Header() {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsMobileServicesOpen(false);
+    setActiveDropdown(null);
+    setMobileOpenDropdowns({});
   }, [pathname]);
 
   useEffect(() => {
@@ -56,18 +60,25 @@ export function Header() {
     };
   }, []);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (label: string) => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
     }
-    setIsServicesOpen(true);
+    setActiveDropdown(label);
   };
 
   const handleMouseLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
-      setIsServicesOpen(false);
+      setActiveDropdown(null);
     }, 100);
+  };
+
+  const toggleMobileDropdown = (label: string) => {
+    setMobileOpenDropdowns(prev => ({
+      ...prev,
+      [label]: !prev[label]
+    }));
   };
 
   return (
@@ -81,48 +92,44 @@ export function Header() {
     >
       <Container>
         <nav className="flex items-center justify-between h-16 sm:h-20">
-            <Link
-              href="/"
-              className="flex items-center gap-2"
-            >
-                    <img 
-                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Untitled-design-13-1766536595488.png?width=8000&height=8000&resize=contain" 
-                      alt="vAlpha Logo" 
-                      className="h-8 w-auto sm:h-10 dark:invert"
-                    />
-              <span className="text-xl font-bold font-heading tracking-tight text-foreground">vAlpha</span>
-            </Link>
+          <Link href="/" className="flex items-center gap-2">
+            <img 
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Untitled-design-13-1766536595488.png?width=8000&height=8000&resize=contain" 
+              alt="vAlpha Logo" 
+              className="h-8 w-auto sm:h-10 dark:invert"
+            />
+            <span className="text-xl font-bold font-heading tracking-tight text-foreground">vAlpha</span>
+          </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               link.hasDropdown ? (
                 <div 
-                  key={link.href} 
-                  className="relative" 
-                  ref={dropdownRef}
-                  onMouseEnter={handleMouseEnter}
+                  key={link.label} 
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(link.label)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <Link
-                    href="/services"
+                  <button
                     className={cn(
-                      "px-4 py-2 text-sm font-medium transition-colors rounded-lg inline-flex items-center gap-1",
-                      pathname.startsWith("/services")
-                        ? "text-sky"
-                        : "text-muted-foreground hover:text-foreground"
+                      "px-3 py-2 text-sm font-medium transition-colors rounded-full inline-flex items-center gap-1",
+                      (link.dropdownLinks?.some(d => pathname.startsWith(d.href)) || pathname.startsWith(link.href))
+                        ? "text-sky bg-sky/5"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                     )}
                   >
                     {link.label}
                     <ChevronDown
-                      size={16}
+                      size={14}
                       className={cn(
-                        "transition-transform duration-200",
-                        isServicesOpen && "rotate-180"
+                        "transition-transform duration-200 opacity-50",
+                        activeDropdown === link.label && "rotate-180 opacity-100"
                       )}
                     />
-                  </Link>
+                  </button>
                   <AnimatePresence>
-                    {isServicesOpen && (
+                    {activeDropdown === link.label && (
                       <motion.div
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -130,24 +137,30 @@ export function Header() {
                         transition={{ duration: 0.15 }}
                         className="absolute top-full left-0 pt-2"
                       >
-                        <div className="w-72 py-2 rounded-xl border border-border bg-card shadow-lg">
-                          <Link
-                            href="/services"
-                            className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                          >
-                            All Services
-                          </Link>
-                          <div className="my-2 border-t border-border" />
-                          {serviceLinks.map((service) => (
-                            <Link
-                              key={service.href}
-                              href={service.href}
-                              className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                            >
-                              <service.icon size={18} className="text-sky" />
-                              {service.label}
-                            </Link>
-                          ))}
+                        <div className="w-64 overflow-hidden rounded-2xl border border-border bg-background/95 backdrop-blur-xl shadow-xl shadow-primary/5">
+                          {link.href !== "/company" && (
+                            <>
+                              <Link
+                                href={link.href}
+                                className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                              >
+                                All {link.label}
+                              </Link>
+                              <div className="border-t border-border" />
+                            </>
+                          )}
+                          <div className="py-1">
+                            {link.dropdownLinks?.map((subLink: any) => (
+                              <Link
+                                key={subLink.href}
+                                href={subLink.href}
+                                className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                              >
+                                {subLink.icon && <subLink.icon size={16} className="text-sky/80" />}
+                                {subLink.label}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </motion.div>
                     )}
@@ -158,10 +171,10 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "px-4 py-2 text-sm font-medium transition-colors rounded-lg",
+                    "px-3 py-2 text-sm font-medium transition-colors rounded-full",
                     pathname === link.href
-                      ? "text-sky"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-sky bg-sky/5"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                   )}
                 >
                   {link.label}
@@ -170,23 +183,23 @@ export function Header() {
             ))}
           </div>
 
-            <div className="hidden md:flex items-center gap-3">
-              <ThemeToggle />
-              <Link
-                href="/quote"
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
-              >
-                Get a Quote
-              </Link>
-            </div>
+          <div className="hidden md:flex items-center gap-3 pl-2 border-l border-border/50">
+            <ThemeToggle />
+            <Link
+              href="/quote"
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 active:scale-95"
+            >
+              Get a Quote
+            </Link>
+          </div>
 
+          {/* Mobile Actions */}
           <div className="flex md:hidden items-center gap-2">
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-foreground"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -194,6 +207,7 @@ export function Header() {
         </nav>
       </Container>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -203,52 +217,54 @@ export function Header() {
             transition={{ duration: 0.2 }}
             className="md:hidden bg-background border-b border-border overflow-hidden"
           >
-            <Container className="py-4">
+            <Container className="py-6">
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (
                   link.hasDropdown ? (
-                    <div key={link.href}>
+                    <div key={link.label} className="py-1">
                       <button
-                        onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                        onClick={() => toggleMobileDropdown(link.label)}
                         className={cn(
-                          "w-full px-4 py-3 text-base font-medium rounded-lg transition-colors flex items-center justify-between",
-                          pathname.startsWith("/services")
-                            ? "text-sky bg-sky/10"
-                            : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                          "w-full px-4 py-2.5 text-base font-medium rounded-xl transition-colors flex items-center justify-between",
+                          (link.dropdownLinks?.some(d => pathname.startsWith(d.href)) || pathname.startsWith(link.href))
+                            ? "text-sky bg-sky/5"
+                            : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                         )}
                       >
                         {link.label}
                         <ChevronDown
                           size={18}
                           className={cn(
-                            "transition-transform duration-200",
-                            isMobileServicesOpen && "rotate-180"
+                            "transition-transform duration-200 opacity-50",
+                            mobileOpenDropdowns[link.label] && "rotate-180 opacity-100"
                           )}
                         />
                       </button>
                       <AnimatePresence>
-                        {isMobileServicesOpen && (
+                        {mobileOpenDropdowns[link.label] && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.15 }}
-                            className="pl-4 overflow-hidden"
+                            className="pl-4 mt-1 space-y-1"
                           >
-                            <Link
-                              href="/services"
-                              className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground"
-                            >
-                              All Services
-                            </Link>
-                            {serviceLinks.map((service) => (
+                            {link.href !== "/company" && (
                               <Link
-                                key={service.href}
-                                href={service.href}
-                                className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground"
+                                href={link.href}
+                                className="block px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
                               >
-                                <service.icon size={16} className="text-sky" />
-                                {service.label}
+                                All {link.label}
+                              </Link>
+                            )}
+                            {link.dropdownLinks?.map((subLink: any) => (
+                              <Link
+                                key={subLink.href}
+                                href={subLink.href}
+                                className="flex items-center gap-3 px-4 py-2 text-sm text-muted-foreground hover:text-foreground"
+                              >
+                                {subLink.icon && <subLink.icon size={16} className="text-sky/70" />}
+                                {subLink.label}
                               </Link>
                             ))}
                           </motion.div>
@@ -260,25 +276,24 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       className={cn(
-                        "px-4 py-3 text-base font-medium rounded-lg transition-colors",
+                        "px-4 py-2.5 text-base font-medium rounded-xl transition-colors",
                         pathname === link.href
-                          ? "text-sky bg-sky/10"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                          ? "text-sky bg-sky/5"
+                          : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                       )}
                     >
                       {link.label}
                     </Link>
                   )
                 ))}
-                      <div className="mt-4 flex flex-col gap-3">
-                        <Link
-                          href="/quote"
-                          className="inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90"
-                        >
-                          Get a Quote
-                        </Link>
-                      </div>
-
+                <div className="mt-4 pt-4 border-t border-border flex flex-col gap-3">
+                  <Link
+                    href="/quote"
+                    className="inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 active:scale-[0.98]"
+                  >
+                    Get a Quote
+                  </Link>
+                </div>
               </div>
             </Container>
           </motion.div>
