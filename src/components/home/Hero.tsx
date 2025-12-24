@@ -154,26 +154,34 @@ export function Hero() {
                   </div>
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 flex flex-col p-8 pt-16">
-                  {/* Floating Stats */}
-                  <div className="mt-auto grid grid-cols-2 gap-4">
-                    {cards.slice(0, 2).map((card, index) => (
+                <div className="absolute inset-0 flex flex-col justify-end p-8">
+                  <div className="flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-white/5 pt-6">
+                    {cards.map((card, index) => (
                       <motion.div
                         key={card.label}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6 + index * 0.1 }}
-                        className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md"
+                        transition={{ delay: 0.8 + index * 0.1 }}
+                        className="flex items-center gap-3 group/item"
                       >
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="p-2 rounded-lg bg-sky/20 text-sky">
-                            <card.icon size={16} />
-                          </div>
-                          <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest">{card.label}</span>
+                        <div className="relative">
+                          <card.icon size={14} className="text-sky/40 group-hover/item:text-sky transition-colors duration-300" />
+                          <div className="absolute -inset-2 bg-sky/10 rounded-full blur-md opacity-0 group-hover/item:opacity-100 transition-opacity" />
                         </div>
-                        <div className="text-lg font-bold text-white">{card.stat}</div>
+                        <div className="flex flex-col">
+                          <span className="text-[8px] text-white/20 uppercase tracking-[0.3em] font-bold transition-colors group-hover/item:text-white/40">
+                            {card.label}
+                          </span>
+                          <span className="text-[11px] font-mono text-white/60 group-hover/item:text-white transition-colors">
+                            {card.stat}
+                          </span>
+                        </div>
                       </motion.div>
                     ))}
+                    <div className="ml-auto hidden xl:flex items-center gap-2">
+                      <div className="w-1 h-1 rounded-full bg-sky animate-pulse" />
+                      <span className="text-[9px] font-mono text-white/20 uppercase tracking-[0.2em]">Network Active</span>
+                    </div>
                   </div>
                 </div>
 
