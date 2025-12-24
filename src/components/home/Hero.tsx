@@ -90,9 +90,9 @@ export function Hero() {
                     </span>
                     <span className="text-xs font-semibold text-sky tracking-wide uppercase">Open for Q1 2025</span>
                   </div>
-                  <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
-                    Building the future of <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">Digital</span>.
-                  </h1>
+                    <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
+                      Building the future of <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">Digital</span>.
+                    </h1>
                   <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
                     High-performance software and immersive digital experiences for the next generation of brands.
                   </p>
