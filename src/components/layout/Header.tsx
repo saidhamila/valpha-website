@@ -19,7 +19,8 @@ const serviceLinks = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasDropdown: true },
-  { href: "/quote", label: "Contact" },
+  { href: "/work", label: "Work" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export function Header() {
@@ -169,13 +170,18 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
-              >
-                About
-              </Link>
-
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
+            >
+              About
+            </Link>
+            <Link
+              href="/quote"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full border border-sky text-sky hover:bg-sky/10 transition-all focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
+            >
+              Contact
+            </Link>
           </div>
 
           <div className="flex md:hidden items-center gap-2">
@@ -268,12 +274,20 @@ export function Header() {
                     </Link>
                   )
                 ))}
+                <div className="mt-4 flex flex-col gap-3">
                   <Link
                     href="/about"
-                    className="mt-4 inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
+                    className="inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
                   >
                     About
                   </Link>
+                  <Link
+                    href="/quote"
+                    className="inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full border border-sky text-sky hover:bg-sky/10"
+                  >
+                    Contact
+                  </Link>
+                </div>
 
               </div>
             </Container>
