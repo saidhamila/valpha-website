@@ -1,10 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import NextImage from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Palette, Sparkles, MessageSquare, ArrowUpRight, ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+
+const words = ["Resonate", "Inspire", "Convert", "Transform", "Connect"];
 
 const cards = [
   { icon: Palette, label: "Design", stat: "Bespoke" },
@@ -22,6 +25,15 @@ const floatingShapes = [
 ];
 
 export function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center pt-12 overflow-hidden">
       {/* Background Elements */}
@@ -91,7 +103,20 @@ export function Hero() {
                     <span className="text-xs font-semibold text-sky tracking-wide uppercase">Open for Q1 2025</span>
                   </div>
                         <h1 className="text-6xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
-                        Crafting brands that <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">Resonate</span>.
+                        Crafting brands that <span className="inline-block min-w-[280px]">
+                          <AnimatePresence mode="wait">
+                            <motion.span
+                              key={words[index]}
+                              initial={{ y: 20, opacity: 0 }}
+                              animate={{ y: 0, opacity: 1 }}
+                              exit={{ y: -20, opacity: 0 }}
+                              transition={{ duration: 0.5, ease: "easeOut" }}
+                              className="inline-block text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]"
+                            >
+                              {words[index]}
+                            </motion.span>
+                          </AnimatePresence>
+                        </span>.
                       </h1>
                     <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
                       A creative agency dedicated to storytelling, strategic design, and building immersive digital identities.
