@@ -9,7 +9,8 @@ const footerLinks = {
       { href: "/about", label: "About" },
       { href: "/work", label: "Work" },
       { href: "/blog", label: "Blog" },
-      { href: "/quote", label: "Get a Quote" },
+        { href: "/quote", label: "Contact" },
+
     ],
   services: [
     { href: "/services/web-development", label: "Web Development" },

@@ -20,7 +20,8 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasDropdown: true },
   { href: "/about", label: "About" },
-  { href: "/quote", label: "Get a Quote" },
+    { href: "/quote", label: "Contact" },
+
 ];
 
 export function Header() {
@@ -170,12 +171,13 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
-            <Link
-              href="/quote"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
-            >
-              Get a Quote
-            </Link>
+              <Link
+                href="/quote"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
+              >
+                Contact
+              </Link>
+
           </div>
 
           <div className="flex md:hidden items-center gap-2">
@@ -268,12 +270,13 @@ export function Header() {
                     </Link>
                   )
                 ))}
-                <Link
-                  href="/quote"
-                  className="mt-4 inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
-                >
-                  Get a Quote
-                </Link>
+                  <Link
+                    href="/quote"
+                    className="mt-4 inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
+                  >
+                    Contact
+                  </Link>
+
               </div>
             </Container>
           </motion.div>
