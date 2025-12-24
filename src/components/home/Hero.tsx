@@ -181,21 +181,6 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
               </div>
 
-              {/* Outside Floating Elements */}
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-6 -left-6 p-4 rounded-2xl bg-black border border-white/10 shadow-2xl z-20 hidden xl:flex items-center gap-4"
-              >
-                <div className="w-10 h-10 rounded-full bg-sky/20 flex items-center justify-center text-sky">
-                  <ArrowUpRight size={20} />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-white/50 uppercase">Network</p>
-                  <p className="text-sm font-bold text-white">10Gbps Edge</p>
-                </div>
-              </motion.div>
-
               </motion.div>
           </div>
         </Container>
