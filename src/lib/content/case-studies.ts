@@ -24,9 +24,53 @@ export interface CaseStudy {
   featured?: boolean;
 }
 
-export const industries = ["All", "Fashion", "Lifestyle", "Technology", "Real Estate", "Hospitality"];
+export const industries = ["All", "Health & Fitness", "Technology", "Real Estate", "Hospitality", "Fashion", "Lifestyle"];
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: "elitegym",
+    slug: "elitegym-digital-presence",
+    title: "EliteGYM",
+    shortDescription: "Transforming a local gym's digital footprint into a high-visibility lead generation engine.",
+    client: "EliteGYM",
+    industry: "Health & Fitness",
+    stack: ["Next.js", "Tailwind CSS", "Supabase", "Stripe", "PostgreSQL"],
+    challenge: "EliteGYM needed to improve their digital footprint and increase visibility online to attract new members in a competitive local market.",
+    solution: "We built a high-performance website with integrated booking and membership management, optimized for local SEO and mobile users.",
+    outcome: "A 40% increase in monthly member sign-ups and 3x more organic search visibility within the first 6 months.",
+    content: `
+## The Challenge
+
+EliteGYM was a top-tier local facility with a digital presence that didn't match the quality of their service. Their website was outdated, difficult to navigate on mobile, and lacked any way for potential members to sign up or book classes online. They were losing ground to national chains with better digital tools.
+
+## Our Approach
+
+We focused on creating a "digital front door" that was as welcoming and professional as the gym itself. The goal was to remove every friction point between a potential member discovering the gym and making their first visit.
+
+### Software Solutions
+
+- **High-Performance Web Platform** - A lightning-fast Next.js site optimized for mobile discovery and speed.
+- **Integrated Membership System** - Seamless Stripe integration for membership payments and automated onboarding.
+- **Local SEO Strategy** - Technical SEO and content optimization to dominate local search results for fitness-related keywords.
+- **Class Booking Engine** - A custom-built scheduling system that allowed members to book sessions in seconds.
+
+## The Results
+
+The launch of the new EliteGYM platform marked a turning point for the business. By humanizing the brand and simplifying the conversion path, we turned their website into their most effective sales tool.
+    `,
+    metrics: [
+      { label: "New Members", value: "+40%" },
+      { label: "Search Visibility", value: "3x Increase" },
+      { label: "Online Bookings", value: "+120%" }
+    ],
+    images: [
+      { alt: "EliteGYM Modern Interface", caption: "Clean, high-energy design optimized for conversion" },
+      { alt: "Membership Portal", caption: "Streamlined signup and payment flow" },
+      { alt: "Mobile Experience", caption: "Perfect performance across all devices" }
+    ],
+    tags: ["Web Development", "Local SEO", "UX Design"],
+    featured: true
+  },
   {
     id: "luminary-fashion",
     slug: "luminary-fashion-branding",
@@ -69,7 +113,7 @@ The rebranding was met with international acclaim, positioning Luminary as a lea
       { alt: "Brand Campaign", caption: "Art directed lifestyle photography" }
     ],
     tags: ["Branding", "Digital Design", "Storytelling"],
-    featured: true
+    featured: false
   },
   {
     id: "nova-tech",
