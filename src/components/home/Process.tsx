@@ -8,27 +8,27 @@ import { Section } from "@/components/layout/Section";
 const steps = [
   {
     icon: Search,
-    title: "Immersion",
-    description: "Deep diving into your brand's essence, audience, and market landscape to find your unique edge.",
-    duration: "1-2 weeks",
+    title: "Assessment",
+    description: "A comprehensive review of your current fitness level, goals, and any physical limitations.",
+    duration: "1 Session",
   },
   {
     icon: Palette,
-    title: "Ideation",
-    description: "Exploring bold creative territories and visual narrative concepts that bring your story to life.",
-    duration: "2-3 weeks",
+    title: "Planning",
+    description: "Designing your custom workout and nutrition strategy tailored to your lifestyle.",
+    duration: "1 Week",
   },
   {
     icon: Zap,
     title: "Execution",
-    description: "Bringing the vision to life with meticulous design and high-performance development.",
-    duration: "4-8 weeks",
+    description: "Hit the floor with your plan and expert guidance from our elite coaching staff.",
+    duration: "Continuous",
   },
   {
     icon: Rocket,
-    title: "Evolution",
-    description: "Launching your brand into the world and refining it for sustained cultural impact.",
-    duration: "Ongoing",
+    title: "Transformation",
+    description: "Witness the results of your hard work as you reach and exceed your fitness goals.",
+    duration: "Lifetime",
   },
 ];
 

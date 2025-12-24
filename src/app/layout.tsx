@@ -9,29 +9,8 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: {
-    default: "vAlpha | Creative Excellence",
-    template: "%s | vAlpha",
-  },
-  description: "High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.",
-  keywords: ["software development", "web design", "SaaS", "AI integration", "digital agency", "vAlpha"],
-  authors: [{ name: "vAlpha" }],
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "vAlpha",
-    title: "vAlpha | Creative Excellence",
-    description: "High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "vAlpha | Creative Excellence",
-    description: "High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "EliteGYM | Premium Fitness & Performance",
+  description: "Join EliteGYM for world-class personal training, group classes, and state-of-the-art facilities designed to transform your body and mind.",
 };
 
 export default function RootLayout({

@@ -1,20 +1,28 @@
-export const testimonials = [
+export interface Testimonial {
+  id: string;
+  content: string;
+  author: string;
+  role: string;
+  avatar?: string;
+}
+
+export const testimonials: Testimonial[] = [
   {
-    quote: "vAlpha redefined our brand identity. Their visionary approach to design transformed our digital presence into an immersive experience that our customers love.",
-    name: "Jennifer Walsh",
-    role: "VP of Brand Strategy",
-    company: "CloudServe Inc."
+    id: "1",
+    content: "EliteGYM changed my life. The trainers aren't just experts; they're mentors who genuinely care about your progress. I've never felt stronger.",
+    author: "David Chen",
+    role: "Member for 2 years"
   },
   {
-    quote: "The creative team delivered a digital platform that blends aesthetic beauty with strategic impact. Their attention to visual storytelling is unmatched.",
-    name: "Michael Torres",
-    role: "Creative Director",
-    company: "QuantFlow Capital"
+    id: "2",
+    content: "The facilities are world-class, but it's the community that keeps me coming back. It's the most supportive environment I've ever trained in.",
+    author: "Elena Rodriguez",
+    role: "Group Fitness Regular"
   },
   {
-    quote: "Partnering with vAlpha felt like having a world-class creative studio at our fingertips. They understood our brand soul and brought it to life with absolute clarity.",
-    name: "Emily Zhang",
-    role: "Founder",
-    company: "DataSync Labs"
+    id: "3",
+    content: "The nutrition coaching was the missing piece for me. I finally understood how to fuel my body without feeling restricted.",
+    author: "Marcus Thorne",
+    role: "Performance Lab Client"
   }
 ];

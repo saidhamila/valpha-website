@@ -8,9 +8,9 @@ import { ArrowRight, Zap, TrendingUp, Shield, ArrowUpRight } from "lucide-react"
 import { Container } from "@/components/layout/Container";
 
 const cards = [
-  { icon: Zap, label: "Brand Strategy", stat: "Iconic Identity" },
-  { icon: TrendingUp, label: "Immersive UX", stat: "Story-Driven" },
-  { icon: Shield, label: "Design Systems", stat: "Pixel Perfect" },
+  { icon: Zap, label: "Strength", stat: "Elite Power" },
+  { icon: TrendingUp, label: "Progress", stat: "Data-Driven" },
+  { icon: Shield, label: "Community", stat: "Supportive" },
 ];
 
 const floatingShapes = [
@@ -84,20 +84,19 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky/10 border border-sky/20 mb-6">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
-                  </span>
-                  <span className="text-xs font-semibold text-sky tracking-wide uppercase">Creative Excellence</span>
-                </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
-                  We craft digital experiences that{" "}
-                  <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">redefine</span> your brand.
-                </h1>
-                <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  A premium creative agency dedicated to building iconic digital identities, high-impact brands, and immersive web experiences that captivate and convert.
-                </p>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky/10 border border-sky/20 mb-6">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
+                    </span>
+                    <span className="text-xs font-semibold text-sky tracking-wide uppercase">Elite Performance</span>
+                  </div>
+                  <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
+                    Transform your body at the <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">EliteGYM</span>.
+                  </h1>
+                  <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                    A premium fitness destination dedicated to building elite athletes, high-impact transformations, and immersive training experiences that push your limits.
+                  </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/quote"

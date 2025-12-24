@@ -7,33 +7,33 @@ import { Section } from "@/components/layout/Section";
 
 const benefits = [
   {
-    title: "Visionary Design",
-    description: "Award-winning aesthetics that capture attention and build lasting brand equity.",
+    title: "Expert Trainers",
+    description: "Certified professionals dedicated to your success and safety.",
     icon: Sparkles,
   },
   {
-    title: "Strategic Impact",
-    description: "Design decisions backed by deep market research and brand psychology.",
+    title: "24/7 Access",
+    description: "Work out on your schedule with round-the-clock gym access.",
     icon: Target,
   },
   {
-    title: "Immersive UX",
-    description: "User-centric storytelling that creates deep emotional connections with your audience.",
+    title: "Elite Community",
+    description: "Train alongside like-minded individuals who push you to be better.",
     icon: MousePointer2,
   },
   {
-    title: "Creative Agility",
-    description: "Fast-moving, high-impact workflows tailored to the pace of modern brands.",
+    title: "Modern Facilities",
+    description: "State-of-the-art equipment and clean, spacious workout zones.",
     icon: Zap,
   },
   {
-    title: "Absolute Clarity",
-    description: "Transparent communication and collaborative creative processes every step of the way.",
+    title: "Proven Results",
+    description: "Scientific training methods that deliver measurable transformations.",
     icon: Eye,
   },
   {
-    title: "Brand Evolution",
-    description: "We don't just launch and leave; we help your brand grow and adapt long-term.",
+    title: "Supportive Culture",
+    description: "A welcoming environment for all fitness levels and backgrounds.",
     icon: Heart,
   },
 ];
@@ -46,12 +46,12 @@ export function Benefits() {
           <p className="text-sm font-medium uppercase tracking-wider text-sky mb-3">
             Creative Edge
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-foreground tracking-tight max-w-3xl">
-            We design for impact, not just aesthetics.
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            A specialized collective of designers, strategists, and creators focused on elevating your digital presence through visionary thinking.
-          </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-foreground tracking-tight max-w-3xl">
+              Why Choose <span className="text-sky">EliteGYM?</span>
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              We provide more than just a place to workout. We provide the tools, the knowledge, and the community you need to succeed.
+            </p>
         </div>
 
         {benefits.map((benefit, index) => (
