@@ -104,7 +104,7 @@ export function Header() {
           </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-2 xl:gap-4">
+            <div className="hidden lg:flex items-center gap-0.5 xl:gap-1">
               {navLinks.map((link) => (
               link.hasDropdown ? (
                 <div 
@@ -185,7 +185,7 @@ export function Header() {
             ))}
           </div>
 
-            <div className="hidden lg:flex items-center gap-4 xl:gap-6 pl-2 border-l border-border/50">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3 pl-2 border-l border-border/50">
               <ThemeToggle />
               <Link
                 href="/quote"
