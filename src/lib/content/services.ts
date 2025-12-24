@@ -11,6 +11,17 @@ export interface Service {
   image: string;
   pricing: string;
   features: string[];
+  deliverables: string[];
+}
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export interface PricingDetails {
+  initial: string;
+  recurring: { label: string; price: string }[];
 }
 
 export const services: Service[] = [
@@ -29,6 +40,13 @@ export const services: Service[] = [
       "Headless CMS Integration",
       "Progressive Web Apps (PWA)",
       "Accessibility (a11y) Compliance"
+    ],
+    deliverables: [
+      "Responsive website design",
+      "SEO optimization",
+      "Performance testing",
+      "Cross-browser compatibility",
+      "Documentation & training"
     ]
   },
   {
@@ -46,6 +64,13 @@ export const services: Service[] = [
       "API Design & Development",
       "Real-time Dashboards",
       "Cloud Infrastructure Setup"
+    ],
+    deliverables: [
+      "Full-stack application",
+      "User authentication system",
+      "Admin dashboard",
+      "API documentation",
+      "Deployment pipeline"
     ]
   },
   {
@@ -63,6 +88,13 @@ export const services: Service[] = [
       "Natural Language Processing",
       "Automated Workflows",
       "Data Analysis & Visualization"
+    ],
+    deliverables: [
+      "AI model integration",
+      "Custom prompt engineering",
+      "API endpoints",
+      "Usage analytics",
+      "Performance optimization"
     ]
   },
   {
@@ -80,6 +112,44 @@ export const services: Service[] = [
       "Database Optimization",
       "Security Audits",
       "Continuous Integration/Deployment"
+    ],
+    deliverables: [
+      "Integration architecture",
+      "API connectors",
+      "Data migration",
+      "Testing suite",
+      "Monitoring setup"
     ]
   }
 ];
+
+export const faqs: FAQ[] = [
+  {
+    question: "How long does a typical project take?",
+    answer: "Project timelines vary based on scope and complexity. A standard website takes 4-8 weeks, while SaaS platforms typically require 3-6 months. We'll provide a detailed timeline during our initial consultation."
+  },
+  {
+    question: "What is your development process?",
+    answer: "We follow an agile methodology with regular check-ins and iterative development. This includes discovery, design, development, testing, and deployment phases with your feedback integrated at each stage."
+  },
+  {
+    question: "Do you provide ongoing support?",
+    answer: "Yes, we offer flexible maintenance and support packages. This includes bug fixes, security updates, performance monitoring, and feature enhancements based on your needs."
+  },
+  {
+    question: "What technologies do you use?",
+    answer: "We specialize in modern web technologies including React, Next.js, TypeScript, Node.js, and various cloud platforms. We choose the best tools for each project's specific requirements."
+  },
+  {
+    question: "How do you handle project communication?",
+    answer: "We use collaborative tools like Slack and project management platforms for transparent communication. You'll have regular updates, access to progress tracking, and direct communication with the development team."
+  }
+];
+
+export const pricingDetails: PricingDetails = {
+  initial: "All projects begin with a discovery phase to understand your needs and provide accurate estimates. Pricing is transparent with no hidden fees.",
+  recurring: [
+    { label: "Maintenance", price: "From $500/mo" },
+    { label: "Support Hours", price: "From $150/hr" }
+  ]
+};
