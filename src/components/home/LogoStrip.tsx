@@ -5,20 +5,21 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 
 const logos = [
-  "Acme Corp",
-  "TechStart",
-  "CloudServe",
-  "DataFlow",
-  "QuantEdge",
-  "NovaSoft",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Framer Motion",
+  "Supabase",
+  "Stripe",
 ];
 
 export function LogoStrip() {
   return (
     <section className="py-16 border-y border-border bg-muted/30">
       <Container>
-        <p className="text-center text-sm font-medium text-muted-foreground mb-8">
-          Trusted by innovative companies
+        <p className="text-center text-sm font-medium text-muted-foreground mb-8 uppercase tracking-widest">
+          The stack behind our creative visions
         </p>
         <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
           {logos.map((logo, index) => (
