@@ -23,7 +23,7 @@ const floatingShapes = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-12 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
@@ -76,7 +76,7 @@ export function Hero() {
         transition={{ duration: 4, repeat: Infinity, delay: 1 }}
       />
       
-      <Container className="relative z-10 py-20 sm:py-32">
+      <Container className="relative z-10 py-12 sm:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
