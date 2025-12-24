@@ -117,49 +117,123 @@ export function Hero() {
 
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative hidden lg:block"
             >
-                <div className="relative rounded-3xl overflow-hidden border border-border shadow-2xl aspect-[4/3]">
+              {/* Main App Frame */}
+              <div className="relative rounded-3xl border border-white/10 bg-black/40 backdrop-blur-3xl shadow-2xl aspect-[4/3] overflow-hidden group">
+                {/* Decorative Window Buttons */}
+                <div className="absolute top-4 left-4 flex gap-1.5 z-20">
+                  <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
+                  <div className="w-3 h-3 rounded-full bg-amber-500/20 border border-amber-500/50" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-500/20 border border-emerald-500/50" />
+                </div>
+
+                {/* Grid Pattern Overlay */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]" />
+
+                {/* Animated Gradient Glow */}
+                <motion.div 
+                  animate={{
+                    opacity: [0.3, 0.5, 0.3],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-20 -right-20 w-64 h-64 bg-sky/30 rounded-full blur-[80px]" 
+                />
+
+                {/* Tech Image / Background */}
+                <div className="absolute inset-0 opacity-40 mix-blend-overlay">
                   <NextImage 
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                    alt="Tech Hero"
+                    alt="Tech Architecture"
                     fill
-                    className="object-cover"
+                    className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                </div>
 
-                  <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-3">
-                    {cards.map((card, index) => (
+                {/* Content Overlay */}
+                <div className="absolute inset-0 flex flex-col p-8 pt-16">
+                  {/* Mock Terminal/Log */}
+                  <div className="flex-1 bg-black/40 rounded-xl border border-white/5 p-4 font-mono text-[10px] text-white/40 overflow-hidden">
+                    <div className="flex items-center gap-2 mb-3 border-b border-white/5 pb-2">
+                      <div className="w-2 h-2 rounded-full bg-sky animate-pulse" />
+                      <span className="text-white/60">system.log</span>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-sky/60">{"[INFO] Initializing VAlpha Core v2.4.0..."}</p>
+                      <p>{"[SUCCESS] Database connection established"}</p>
+                      <p>{"[INFO] Deploying AI microservices..."}</p>
+                      <motion.p
+                        animate={{ opacity: [0, 1, 0] }}
+                        transition={{ duration: 1, repeat: Infinity }}
+                        className="text-emerald-400"
+                      >
+                        {"> Ready for production"}
+                      </motion.p>
+                    </div>
+                  </div>
+
+                  {/* Floating Stats */}
+                  <div className="mt-6 grid grid-cols-2 gap-4">
+                    {cards.slice(0, 2).map((card, index) => (
                       <motion.div
                         key={card.label}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                        className="p-3 rounded-xl border border-white/20 bg-black/40 backdrop-blur-xl flex items-center justify-between group/card"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6 + index * 0.1 }}
+                        className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md"
                       >
-                        <div className="flex items-center gap-3">
-                          <div className="p-2 rounded-lg bg-sky/20 text-sky group-hover/card:bg-sky group-hover/card:text-white transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="p-2 rounded-lg bg-sky/20 text-sky">
                             <card.icon size={16} />
                           </div>
-                          <div>
-                            <p className="text-[10px] font-bold uppercase tracking-wider text-white/50 leading-none mb-1">
-                              {card.label}
-                            </p>
-                            <p className="text-sm font-bold text-white">
-                              {card.stat}
-                            </p>
-                          </div>
+                          <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest">{card.label}</span>
                         </div>
-                        <ArrowUpRight size={14} className="text-white/30 group-hover/card:text-white transition-colors" />
+                        <div className="text-lg font-bold text-white">{card.stat}</div>
                       </motion.div>
                     ))}
                   </div>
+                </div>
 
+                {/* Reflection effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
               </div>
-              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-sky to-sky/50 rounded-full blur-2xl opacity-40" />
+
+              {/* Outside Floating Elements */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-6 -right-6 p-4 rounded-2xl bg-white border border-border shadow-xl z-20 hidden xl:flex items-center gap-4"
+              >
+                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                  <Zap size={20} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase">System Status</p>
+                  <p className="text-sm font-bold text-foreground">Optimized</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -bottom-6 -left-6 p-4 rounded-2xl bg-black border border-white/10 shadow-2xl z-20 hidden xl:flex items-center gap-4"
+              >
+                <div className="w-10 h-10 rounded-full bg-sky/20 flex items-center justify-center text-sky">
+                  <Shield size={20} />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-white/50 uppercase">Security</p>
+                  <p className="text-sm font-bold text-white">Encrypted</p>
+                </div>
+              </motion.div>
+
+              {/* Decorative Background Glows */}
+              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-sky/20 rounded-full blur-3xl -z-10" />
+              <div className="absolute -top-10 -left-10 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl -z-10" />
             </motion.div>
         </div>
       </Container>
