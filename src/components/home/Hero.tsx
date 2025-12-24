@@ -107,9 +107,9 @@ export function Hero() {
                           <AnimatePresence mode="wait">
                             <motion.span
                               key={words[index]}
-                              initial={{ y: 20, opacity: 0 }}
-                              animate={{ y: 0, opacity: 1 }}
-                              exit={{ y: -20, opacity: 0 }}
+                                initial={{ y: -20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                exit={{ y: 20, opacity: 0 }}
                               transition={{ duration: 0.5, ease: "easeOut" }}
                               className="inline-block text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]"
                             >
