@@ -20,6 +20,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasDropdown: true },
   { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -171,10 +172,10 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <Link
-              href="/about"
+              href="/quote"
               className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
             >
-              About
+              Get a Quote
             </Link>
           </div>
 
@@ -268,14 +269,14 @@ export function Header() {
                     </Link>
                   )
                 ))}
-                  <div className="mt-4 flex flex-col gap-3">
-                    <Link
-                      href="/about"
-                      className="inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
-                    >
-                      About
-                    </Link>
-                  </div>
+                    <div className="mt-4 flex flex-col gap-3">
+                      <Link
+                        href="/quote"
+                        className="inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
+                      >
+                        Get a Quote
+                      </Link>
+                    </div>
 
               </div>
             </Container>
