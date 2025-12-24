@@ -2,38 +2,38 @@
 
 
 import { motion } from "framer-motion";
-import { Award, Briefcase, Layers, Cpu, Eye, Heart } from "lucide-react";
+import { Sparkles, Target, MousePointer2, Zap, Eye, Heart } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const benefits = [
   {
-    title: "Senior Expertise",
-    description: "Senior engineers with 10+ years of experience leading complex projects.",
-    icon: Award,
+    title: "Visionary Design",
+    description: "Award-winning aesthetics that capture attention and build lasting brand equity.",
+    icon: Sparkles,
   },
   {
-    title: "Proven Track Record",
-    description: "Trusted by Fortune 500 clients and high-growth startups globally.",
-    icon: Briefcase,
+    title: "Strategic Impact",
+    description: "Design decisions backed by deep market research and brand psychology.",
+    icon: Target,
   },
   {
-    title: "End-to-End Delivery",
-    description: "Full-stack capabilities from initial strategy to final deployment.",
-    icon: Layers,
+    title: "Immersive UX",
+    description: "User-centric storytelling that creates deep emotional connections with your audience.",
+    icon: MousePointer2,
   },
   {
-    title: "AI-First Strategy",
-    description: "We leverage AI to build smarter, faster, and more efficient solutions.",
-    icon: Cpu,
+    title: "Creative Agility",
+    description: "Fast-moving, high-impact workflows tailored to the pace of modern brands.",
+    icon: Zap,
   },
   {
-    title: "Total Transparency",
-    description: "Clear communication, regular updates, and honest pricing always.",
+    title: "Absolute Clarity",
+    description: "Transparent communication and collaborative creative processes every step of the way.",
     icon: Eye,
   },
   {
-    title: "Long-term Partner",
-    description: "We don't just ship and leave; we support your growth long-term.",
+    title: "Brand Evolution",
+    description: "We don't just launch and leave; we help your brand grow and adapt long-term.",
     icon: Heart,
   },
 ];
@@ -44,13 +44,13 @@ export function Benefits() {
       <div className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-3 mb-8">
           <p className="text-sm font-medium uppercase tracking-wider text-sky mb-3">
-            Why vAlpha
+            Creative Edge
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-foreground tracking-tight max-w-3xl">
-            We build software that actually works.
+            We design for impact, not just aesthetics.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            No bloated teams, no endless meetings. Just experienced engineers who understand your business and deliver results.
+            A specialized collective of designers, strategists, and creators focused on elevating your digital presence through visionary thinking.
           </p>
         </div>
 

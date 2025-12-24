@@ -10,23 +10,23 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: {
-    default: "vAlpha | AI-Powered Software Engineering",
+    default: "vAlpha | Creative Agency & Digital Studio",
     template: "%s | vAlpha",
   },
-  description: "We build intelligent software solutions—web apps, AI assistants, and automation systems—that help businesses scale and innovate.",
-  keywords: ["software development", "AI", "automation", "web development", "SaaS", "consulting"],
+  description: "We craft iconic digital identities and immersive web experiences. A premium creative agency dedicated to visionary design and strategic storytelling.",
+  keywords: ["creative agency", "digital studio", "brand identity", "web design", "UX design", "creative strategy"],
   authors: [{ name: "vAlpha" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "vAlpha",
-    title: "vAlpha | AI-Powered Software Engineering",
-    description: "We build intelligent software solutions that help businesses automate, scale, and innovate.",
+    title: "vAlpha | Creative Agency & Digital Studio",
+    description: "We craft iconic digital identities and immersive web experiences. A premium creative agency dedicated to visionary design and strategic storytelling.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "vAlpha | AI-Powered Software Engineering",
-    description: "We build intelligent software solutions that help businesses automate, scale, and innovate.",
+    title: "vAlpha | Creative Agency & Digital Studio",
+    description: "We craft iconic digital identities and immersive web experiences. A premium creative agency dedicated to visionary design and strategic storytelling.",
   },
   robots: {
     index: true,

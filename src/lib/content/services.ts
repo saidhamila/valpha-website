@@ -1,211 +1,211 @@
-import { Globe, Layout, Bot, Plug } from "lucide-react";
+import { Globe, Palette, Sparkles, Camera } from "lucide-react";
 
 export const services = [
   {
-    id: "web-development",
-    slug: "web-development",
+    id: "digital-experience",
+    slug: "digital-experience",
     icon: Globe,
-    title: "Web Development",
-    shortDescription: "Marketing websites, landing pages, and business sites built for performance and SEO.",
-    description: "We build modern, responsive, and SEO-optimized websites that help your business stand out. From high-converting landing pages to comprehensive business sites, we handle everything from design to deployment.",
+    title: "Digital Experience",
+    shortDescription: "High-end web design and immersive digital experiences that captivate your audience.",
+    description: "We craft award-winning digital experiences that blend artistry with technology. From immersive 3D web environments to high-performance storytelling platforms, we redefine how brands live online.",
     deliverables: [
-      "Modern responsive UI/UX design",
-      "SEO fundamentals & metadata optimization",
-      "High-performance architecture",
-      "Security best practices (HTTPS, secure headers)",
-      "Deployment & launch support",
-      "Bundled API add-ons available"
+      "Custom Immersive Web Design",
+      "Interactive Storytelling Systems",
+      "Motion Graphics & Interaction Design",
+      "Responsive Multi-device Experience",
+      "Digital Art Direction",
+      "Performance-Optimized Hosting"
     ],
-    pricing: "Free domain + 6 months free hosting",
+    pricing: "Bespoke experiences from $15k",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-    heroDescription: "Get a professional web presence that converts visitors into customers. We build fast, secure, and SEO-ready websites tailored to your business needs.",
+    heroDescription: "Elevate your brand with a digital presence that feels alive. We create immersive experiences that don't just work—they inspire.",
     features: [
       {
-        title: "Conversion-Focused Design",
-        description: "Every pixel is placed with intent to guide your visitors towards your goals."
+        title: "Immersive Design",
+        description: "Captivate users with fluid animations and cinematic digital environments."
       },
       {
-        title: "SEO Optimized",
-        description: "Built-in SEO best practices to ensure your site is discoverable and ranks well on search engines."
+        title: "Strategic Storytelling",
+        description: "Every interaction is designed to communicate your brand's unique narrative."
       },
       {
-        title: "Lightning Fast",
-        description: "Optimized performance for better user experience and higher search engine rankings."
+        title: "Technical Artistry",
+        description: "Cutting-edge web tech met with uncompromising aesthetic standards."
       },
       {
-        title: "Mobile First",
-        description: "Seamless experience across all devices, from smartphones to large desktop screens."
+        title: "Future-Proof Tech",
+        description: "Scalable, high-performance builds that stand the test of time and trends."
       }
     ],
     process: [
-      { step: "Discovery", description: "Understand your brand, audience, and business objectives." },
-      { step: "Design", description: "Create a visual identity that resonates with your customers." },
-      { step: "Build", description: "Develop your site using modern, reliable technologies." },
-      { step: "Launch", description: "Rigorous testing and smooth deployment to your new domain." }
+      { step: "Discovery", description: "Uncovering your brand's essence and creative vision." },
+      { step: "Concepting", description: "Developing bold visual directions and narrative themes." },
+      { step: "Execution", description: "Meticulous design and development of your digital masterpiece." },
+      { step: "Evolution", description: "Launching and refining for maximum impact and reach." }
     ]
   },
   {
-    id: "saas-development",
-    slug: "saas-development",
-    icon: Layout,
-    title: "SaaS Development",
-    shortDescription: "Custom MVPs, dashboards, and subscription platforms built to scale.",
-    description: "We build complex web applications and SaaS products designed for scalability and user engagement. From authentication to payments, we handle the full stack of your product development.",
+    id: "brand-identity",
+    slug: "brand-identity",
+    icon: Palette,
+    title: "Brand Identity",
+    shortDescription: "Strategic branding and visual identity systems that tell your story.",
+    description: "We build more than logos; we build legacies. Our strategic approach to branding ensures your visual identity is cohesive, memorable, and deeply rooted in your core values.",
     deliverables: [
-      "Scalable system architecture",
-      "Authentication & role-based access",
-      "Payments & subscription integration",
-      "Custom dashboards & internal tools",
-      "Observability & error handling",
-      "AI & API optional add-ons"
+      "Brand Strategy & Positioning",
+      "Logo Systems & Visual Language",
+      "Typography & Color Theory",
+      "Comprehensive Brand Guidelines",
+      "Marketing Collateral Design",
+      "Social Media Identity Kits"
     ],
-    pricing: "Free domain + 6 months free hosting",
+    pricing: "Identity packages from $8k",
     image: "https://images.unsplash.com/photo-1551288049-bbbda53666cf?q=80&w=2070&auto=format&fit=crop",
-    heroDescription: "Turn your product idea into a scalable SaaS platform. We handle the complexity of building modern web applications so you can focus on your business.",
+    heroDescription: "Define who you are and why you matter. We build visual identities that command attention and build lasting trust.",
     features: [
       {
-        title: "Scalable Architecture",
-        description: "Systems designed to grow with your user base without performance degradation."
+        title: "Strategic Foundation",
+        description: "Visuals backed by rigorous market research and brand psychology."
       },
       {
-        title: "Secure Authentication",
-        description: "Robust user management and secure access controls for your sensitive data."
+        title: "Unique Visual Language",
+        description: "Bespoke design systems that set you apart from the competition."
       },
       {
-        title: "Payment Integration",
-        description: "Seamless billing and subscription management with Stripe and other providers."
+        title: "Cross-Platform Cohesion",
+        description: "Consistent brand presentation across every touchpoint and medium."
       },
       {
-        title: "Data Insights",
-        description: "Powerful dashboards and reporting tools to help you make data-driven decisions."
+        title: "Scalable Guidelines",
+        description: "Clear instructions for your team to maintain brand integrity as you grow."
       }
     ],
     process: [
-      { step: "Discovery", description: "Deep dive into your product vision and technical requirements." },
-      { step: "Architecture", description: "Design a robust foundation for your scalable application." },
-      { step: "Build", description: "Agile development with regular milestones and feedback loops." },
-      { step: "QA & Launch", description: "Thorough testing and managed deployment to production." }
+      { step: "Immersion", description: "Deep diving into your industry, audience, and aspirations." },
+      { step: "Ideation", description: "Exploring multiple creative territories and visual concepts." },
+      { step: "Refinement", description: "Polishing the chosen direction into a complete brand system." },
+      { step: "Delivery", description: "Equipping you with all the tools needed for a successful launch." }
     ]
   },
   {
-    id: "ai-assistance",
-    slug: "ai-assistance",
-    icon: Bot,
-    title: "AI Assistance",
-    shortDescription: "Intelligent AI features integrated into your web and SaaS products.",
-    description: "We embed powerful AI capabilities directly into your products to automate tasks and enhance user experience. From intelligent chatbots to content summarization, we make your software smarter.",
+    id: "creative-strategy",
+    slug: "creative-strategy",
+    icon: Sparkles,
+    title: "Creative Strategy",
+    shortDescription: "Data-driven creative direction and brand positioning for market leaders.",
+    description: "Creativity without strategy is just art. We combine deep market insights with visionary thinking to chart a course for your brand's growth and cultural relevance.",
     deliverables: [
-      "Embedded AI chat/helpdesk assistants",
-      "AI content drafting & summarization",
-      "Knowledge base & RAG integration",
-      "Privacy-first secure integration",
-      "Custom LLM fine-tuning options",
-      "Automated customer Q&A systems"
+      "Market Research & Insights",
+      "Content Strategy & Frameworks",
+      "Creative Direction & Guidance",
+      "Campaign Concept Development",
+      "Brand Messaging & Copywriting",
+      "Cultural Trend Forecasting"
     ],
-    pricing: "Custom integration available",
+    pricing: "Strategy retainers from $5k/mo",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
-    heroDescription: "Supercharge your software with modern AI capabilities. We integrate intelligent features that provide real value to your users and save time for your team.",
+    heroDescription: "Bridge the gap between vision and impact. Our strategies turn creative potential into measurable business results.",
     features: [
       {
-        title: "Intelligent Chat",
-        description: "AI assistants that understand your business and provide accurate support to your users."
+        title: "Insight-Driven",
+        description: "Strategies informed by real-world data and audience behavior patterns."
       },
       {
-        title: "Content Automation",
-        description: "Save hours of work with AI-powered drafting, summarization, and translation features."
+        title: "Future-Focused",
+        description: "Positioning your brand not just for today, but for where the world is going."
       },
       {
-        title: "Privacy First",
-        description: "Secure integrations that protect your data and respect user privacy."
+        title: "Narrative Mastery",
+        description: "Crafting compelling stories that resonate deeply with your target audience."
       },
       {
-        title: "RAG Integration",
-        description: "Connect AI to your specific business knowledge for accurate, contextual responses."
+        title: "Holistic Approach",
+        description: "Integrating strategy across product, marketing, and brand communication."
       }
     ],
     process: [
-      { step: "Audit", description: "Identify where AI can provide the most value in your product." },
-      { step: "Integration", description: "Seamlessly connect AI models to your existing systems." },
-      { step: "Testing", description: "Extensive testing for accuracy, safety, and performance." },
-      { step: "Support", description: "Ongoing monitoring and refinement of AI interactions." }
+      { step: "Audit", description: "Evaluating your current positioning and market opportunities." },
+      { step: "Analysis", description: "Interpreting data to uncover unique brand advantages." },
+      { step: "Strategic Map", description: "Defining the clear path forward for your creative efforts." },
+      { step: "Execution", description: "Working alongside your team to bring the strategy to life." }
     ]
   },
   {
-    id: "api-integration",
-    slug: "api-integration",
-    icon: Plug,
-    title: "API & Systems Integration",
-    shortDescription: "Reliable connections between your tools and third-party systems.",
-    description: "We specialize in making your tools talk to each other. Whether it's syncing data between platforms or building custom middleware, we ensure your systems work in harmony.",
+    id: "art-direction",
+    slug: "art-direction",
+    icon: Camera,
+    title: "Art Direction",
+    shortDescription: "Visual storytelling and aesthetic direction across all digital touchpoints.",
+    description: "We curate the visual soul of your brand. Our art direction services ensure that every image, video, and design element works in perfect harmony to evoke the right emotions.",
     deliverables: [
-      "Third-party API integrations",
-      "Webhooks & real-time data sync",
-      "Secure OAuth & API key management",
-      "Robust retry & rate-limit handling",
-      "ETL-lite & data transformation",
-      "Input validation & error logging"
+      "Creative Concepting",
+      "Photography & Film Direction",
+      "Visual Aesthetic Curation",
+      "Mood Boarding & Visual Style",
+      "Production Oversight",
+      "Graphic Expression Systems"
     ],
-    pricing: "Custom quotes based on complexity",
+    pricing: "Creative direction from $10k",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2070&auto=format&fit=crop",
-    heroDescription: "Eliminate data silos and manual work by connecting your business tools. We build secure, reliable integrations that keep your data moving.",
+    heroDescription: "Bring your brand to life with stunning visuals. We provide the aesthetic vision and leadership to make your brand unforgettable.",
     features: [
       {
-        title: "Reliable Sync",
-        description: "Robust data synchronization that handles failures and rate limits gracefully."
+        title: "Cinematic Aesthetic",
+        description: "High-end visual direction that brings a premium feel to your brand."
       },
       {
-        title: "Secure Methods",
-        description: "Industry-standard authentication and secure management of sensitive API keys."
+        title: "Consistent Vibe",
+        description: "Ensuring every visual element feels like it belongs to the same world."
       },
       {
-        title: "Custom Middleware",
-        description: "Bespoke code to transform and route data exactly where it needs to go."
+        title: "Emotive Visuals",
+        description: "Directing content that connects with people on an emotional level."
       },
       {
-        title: "Real-time Updates",
-        description: "Webhook implementations for instant data flow between your business tools."
+        title: "Technical Excellence",
+        description: "Expert oversight to ensure the highest quality production values."
       }
     ],
     process: [
-      { step: "Analysis", description: "Map out your systems and identify necessary data flows." },
-      { step: "Design", description: "Create a secure and efficient integration architecture." },
-      { step: "Implementation", description: "Build and deploy reliable connections between your tools." },
-      { step: "Monitoring", description: "Automated alerts and logs to ensure ongoing reliability." }
+      { step: "Inspiration", description: "Gathering references and defining the visual mood." },
+      { step: "Creation", description: "Directing the production of visual assets and designs." },
+      { step: "Curating", description: "Selecting and refining the best work for maximum impact." },
+      { step: "Launching", description: "Seeing the visual story through to its final presentation." }
     ]
   }
 ];
 
 export const pricingDetails = {
-  initial: "Free domain included + 6 months free hosting at the start.",
+  initial: "Bespoke projects tailored to your brand's unique needs.",
   recurring: [
-    { label: "Hosting", price: "$60/month" },
-    { label: "Maintenance", price: "$150/month" }
+    { label: "Creative Support", price: "from $2,500/mo" },
+    { label: "Brand Maintenance", price: "from $1,000/mo" }
   ]
 };
 
 export const faqs = [
   {
-    question: "What is included in the free domain and hosting offer?",
-    answer: "For all new web and SaaS development projects, we include one year of domain registration and six months of high-performance hosting at no extra cost to help you get started."
+    question: "How do you start a new creative project?",
+    answer: "Every partnership begins with a deep-dive discovery session. We listen to your vision, understand your goals, and then craft a bespoke creative proposal that outlines our strategic approach."
   },
   {
-    question: "What are the costs after the first 6 months?",
-    answer: "After the initial 6-month period, hosting is $60/month and maintenance is $150/month. This covers server costs, security updates, and regular backups."
+    question: "What is your typical project timeline?",
+    answer: "Project timelines vary based on complexity. A brand identity system typically takes 4-6 weeks, while a full digital experience build can range from 8-12 weeks."
   },
   {
-    question: "Do you offer ongoing maintenance and support?",
-    answer: "Yes, our maintenance package includes regular bug fixes, security updates, performance monitoring, and small enhancements to keep your software running smoothly."
+    question: "Do you offer long-term creative partnerships?",
+    answer: "Yes, many of our clients choose our creative retainer model. This ensures you have ongoing access to our design and strategy team for brand evolution and marketing support."
   },
   {
-    question: "What technologies do you work with?",
-    answer: "We specialize in modern web technologies including React, Next.js, Node.js, and Python. We use cloud infrastructure like AWS and Vercel to ensure scalability and reliability."
+    question: "What makes your agency different?",
+    answer: "We blend high-end aesthetic vision with rigorous strategic thinking. We don't just make things look good; we make them work for your business and resonate with your audience."
   },
   {
-    question: "Can you integrate AI into my existing website?",
-    answer: "Absolutely. Our AI Assistance service is designed to be embedded into both new and existing products, whether it's a simple website or a complex SaaS dashboard."
+    question: "Can you help with my existing brand?",
+    answer: "Absolutely. We often work on brand refreshes and evolutions, helping established companies modernize their visual language and digital presence without losing their core essence."
   },
   {
-    question: "How do you handle data security?",
-    answer: "Security is built into every layer. We use secure headers, encrypted connections, and follow industry best practices for authentication and data management."
+    question: "Who will I be working with directly?",
+    answer: "You'll have a dedicated creative lead and project manager. We believe in direct communication and collaborative partnerships, ensuring you're part of the process every step of the way."
   }
 ];

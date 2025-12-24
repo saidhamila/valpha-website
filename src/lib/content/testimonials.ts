@@ -1,18 +1,18 @@
 export const testimonials = [
   {
-    quote: "vAlpha transformed our support operations. Their AI solution now handles 70% of our tickets, and our customers are happier than ever.",
+    quote: "vAlpha redefined our brand identity. Their visionary approach to design transformed our digital presence into an immersive experience that our customers love.",
     name: "Jennifer Walsh",
-    role: "VP of Customer Success",
+    role: "VP of Brand Strategy",
     company: "CloudServe Inc."
   },
   {
-    quote: "The team delivered a trading platform that exceeded our expectations. Their technical expertise and attention to detail made all the difference.",
+    quote: "The creative team delivered a digital platform that blends aesthetic beauty with strategic impact. Their attention to visual storytelling is unmatched.",
     name: "Michael Torres",
-    role: "CTO",
+    role: "Creative Director",
     company: "QuantFlow Capital"
   },
   {
-    quote: "Working with vAlpha felt like having a senior engineering team on demand. They understood our constraints and delivered a solution that scales.",
+    quote: "Partnering with vAlpha felt like having a world-class creative studio at our fingertips. They understood our brand soul and brought it to life with absolute clarity.",
     name: "Emily Zhang",
     role: "Founder",
     company: "DataSync Labs"

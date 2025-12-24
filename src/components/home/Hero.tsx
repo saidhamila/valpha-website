@@ -8,9 +8,9 @@ import { ArrowRight, Zap, TrendingUp, Shield, ArrowUpRight } from "lucide-react"
 import { Container } from "@/components/layout/Container";
 
 const cards = [
-  { icon: Zap, label: "AI Automation", stat: "+40% efficiency" },
-  { icon: TrendingUp, label: "Scalable SaaS", stat: "10x throughput" },
-  { icon: Shield, label: "Enterprise Security", stat: "100% compliant" },
+  { icon: Zap, label: "Brand Strategy", stat: "Iconic Identity" },
+  { icon: TrendingUp, label: "Immersive UX", stat: "Story-Driven" },
+  { icon: Shield, label: "Design Systems", stat: "Pixel Perfect" },
 ];
 
 const floatingShapes = [
@@ -84,20 +84,20 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky/10 border border-sky/20 mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
-                </span>
-                <span className="text-xs font-semibold text-sky tracking-wide uppercase">AI-Ready Engineering</span>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
-                Build smarter products with{" "}
-                <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">AI-powered</span> engineering.
-              </h1>
-              <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                We design and build custom web applications, AI assistants, and automation systems that help businesses scale faster and work smarter.
-              </p>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky/10 border border-sky/20 mb-6">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
+                  </span>
+                  <span className="text-xs font-semibold text-sky tracking-wide uppercase">Creative Excellence</span>
+                </div>
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-heading tracking-tight text-foreground leading-[1.05]">
+                  We craft digital experiences that{" "}
+                  <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-sky via-blue-500 to-indigo-600 animate-gradient-x drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">redefine</span> your brand.
+                </h1>
+                <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                  A premium creative agency dedicated to building iconic digital identities, high-impact brands, and immersive web experiences that captivate and convert.
+                </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/quote"
@@ -192,23 +192,23 @@ export function Hero() {
                   <Zap size={20} />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-muted-foreground uppercase">System Status</p>
-                  <p className="text-sm font-bold text-foreground">Optimized</p>
-                </div>
-              </motion.div>
+                    <p className="text-[10px] font-bold text-muted-foreground uppercase">Design Status</p>
+                    <p className="text-sm font-bold text-foreground">Inspired</p>
+                  </div>
+                </motion.div>
 
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-6 -left-6 p-4 rounded-2xl bg-black border border-white/10 shadow-2xl z-20 hidden xl:flex items-center gap-4"
-              >
-                <div className="w-10 h-10 rounded-full bg-sky/20 flex items-center justify-center text-sky">
-                  <Shield size={20} />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-white/50 uppercase">Security</p>
-                  <p className="text-sm font-bold text-white">Encrypted</p>
-                </div>
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-6 -left-6 p-4 rounded-2xl bg-black border border-white/10 shadow-2xl z-20 hidden xl:flex items-center gap-4"
+                >
+                  <div className="w-10 h-10 rounded-full bg-sky/20 flex items-center justify-center text-sky">
+                    <Shield size={20} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-bold text-white/50 uppercase">Creative</p>
+                    <p className="text-sm font-bold text-white">Visionary</p>
+                  </div>
               </motion.div>
 
               {/* Decorative Background Glows */}

@@ -2,32 +2,32 @@
 
 
 import { motion } from "framer-motion";
-import { MessageSquare, PenTool, Code2, Rocket } from "lucide-react";
+import { Search, Palette, Zap, Rocket } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 
 const steps = [
   {
-    icon: MessageSquare,
-    title: "Discovery",
-    description: "We dive deep into your goals, challenges, and vision to understand exactly what you need.",
+    icon: Search,
+    title: "Immersion",
+    description: "Deep diving into your brand's essence, audience, and market landscape to find your unique edge.",
     duration: "1-2 weeks",
   },
   {
-    icon: PenTool,
-    title: "Design & Architecture",
-    description: "We craft the technical blueprint and user experience that will bring your vision to life.",
-    duration: "1-2 weeks",
+    icon: Palette,
+    title: "Ideation",
+    description: "Exploring bold creative territories and visual narrative concepts that bring your story to life.",
+    duration: "2-3 weeks",
   },
   {
-    icon: Code2,
-    title: "Development",
-    description: "Agile sprints with regular demos. You see progress every week and can course-correct early.",
-    duration: "4-12 weeks",
+    icon: Zap,
+    title: "Execution",
+    description: "Bringing the vision to life with meticulous design and high-performance development.",
+    duration: "4-8 weeks",
   },
   {
     icon: Rocket,
-    title: "Launch & Iterate",
-    description: "We deploy to production and provide ongoing support as you gather real user feedback.",
+    title: "Evolution",
+    description: "Launching your brand into the world and refining it for sustained cultural impact.",
     duration: "Ongoing",
   },
 ];
@@ -35,9 +35,9 @@ const steps = [
 export function Process() {
   return (
     <Section
-      eyebrow="How we work"
-      title="From idea to launch"
-      description="A proven process that delivers results on time and on budget."
+      eyebrow="Our Workflow"
+      title="Crafting your brand story"
+      description="A methodical approach to creativity that ensures consistent, high-quality results."
     >
       <div className="relative">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
