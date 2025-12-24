@@ -73,7 +73,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border"
+          ? "bg-transparent backdrop-blur-md border-b border-border/50"
           : "bg-transparent"
       )}
     >
@@ -83,11 +83,11 @@ export function Header() {
               href="/"
               className="flex items-center gap-2"
             >
-                  <img 
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/channels4_profile-1766525650837.jpg?width=8000&height=8000&resize=contain" 
-                    alt="vAlpha Logo" 
-                    className="h-8 w-auto sm:h-10 dark:invert mix-blend-multiply dark:mix-blend-screen contrast-[1.1] brightness-[1.05]"
-                  />
+                    <img 
+                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/channels4_profile-1766525650837.jpg?width=8000&height=8000&resize=contain" 
+                      alt="vAlpha Logo" 
+                      className="h-8 w-auto sm:h-10 dark:invert mix-blend-multiply dark:mix-blend-screen contrast-[1.2] brightness-[1.1]"
+                    />
               <span className="text-xl font-bold font-heading tracking-tight text-foreground">vAlpha</span>
             </Link>
 
