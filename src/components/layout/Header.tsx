@@ -25,7 +25,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasDropdown: true, dropdownLinks: serviceLinks },
   { href: "/about", label: "About" },
-  { href: "/work", label: "Work" },
+    { href: "/work", label: "Portfolio" },
   { href: "/company", label: "Company", hasDropdown: true, dropdownLinks: companyLinks },
 ];
 
