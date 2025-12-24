@@ -5,7 +5,7 @@ import { Container } from "@/components/layout/Container";
 
 export function WorkHero() {
   return (
-    <section className="pt-24 pb-16 sm:pt-32 sm:pb-20">
+    <section className="pt-24 pb-8 sm:pt-32 sm:pb-12">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
