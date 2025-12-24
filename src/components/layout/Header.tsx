@@ -19,9 +19,7 @@ const serviceLinks = [
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasDropdown: true },
-  { href: "/about", label: "About" },
-    { href: "/quote", label: "Contact" },
-
+  { href: "/quote", label: "Contact" },
 ];
 
 export function Header() {
@@ -172,10 +170,10 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
               <Link
-                href="/quote"
+                href="/about"
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full bg-sky text-primary transition-all hover:bg-sky/90 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-background"
               >
-                Contact
+                About
               </Link>
 
           </div>
@@ -271,10 +269,10 @@ export function Header() {
                   )
                 ))}
                   <Link
-                    href="/quote"
+                    href="/about"
                     className="mt-4 inline-flex items-center justify-center px-5 py-3 text-base font-medium rounded-full bg-sky text-primary"
                   >
-                    Contact
+                    About
                   </Link>
 
               </div>
