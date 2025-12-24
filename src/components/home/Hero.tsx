@@ -183,20 +183,6 @@ export function Hero() {
 
               {/* Outside Floating Elements */}
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-6 -right-6 p-4 rounded-2xl bg-white border border-border shadow-xl z-20 hidden xl:flex items-center gap-4"
-              >
-                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                  <Zap size={20} />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-muted-foreground uppercase">System Status</p>
-                  <p className="text-sm font-bold text-foreground">Operational</p>
-                </div>
-              </motion.div>
-
-              <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="absolute -bottom-6 -left-6 p-4 rounded-2xl bg-black border border-white/10 shadow-2xl z-20 hidden xl:flex items-center gap-4"
