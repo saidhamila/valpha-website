@@ -11,7 +11,7 @@ const Process = dynamic(() => import("@/components/home/Process").then((mod) => 
 const Stats = dynamic(() => import("@/components/home/Stats").then((mod) => mod.Stats), { ssr: false });
 const TechStack = dynamic(() => import("@/components/home/TechStack").then((mod) => mod.TechStack), { ssr: false });
 const FeaturedCaseStudy = dynamic(() => import("@/components/home/FeaturedCaseStudy").then((mod) => mod.FeaturedCaseStudy), { ssr: false });
-const Testimonials = dynamic(() => import("@/components/home/Testimonials").then((mod) => mod.Testimonials), { ssr: false });
+const CoreValues = dynamic(() => import("@/components/home/CoreValues").then((mod) => mod.CoreValues), { ssr: false });
 const FAQ = dynamic(() => import("@/components/home/FAQ").then((mod) => mod.FAQ), { ssr: false });
 const CTAStrip = dynamic(() => import("@/components/home/CTAStrip").then((mod) => mod.CTAStrip), { ssr: false });
 
@@ -36,7 +36,7 @@ export default function Home() {
       <Stats />
       <TechStack />
       <FeaturedCaseStudy />
-      <Testimonials />
+      <CoreValues />
       <FAQ />
       <CTAStrip />
     </div>
