@@ -46,7 +46,7 @@ export const services: Service[] = [
     heroDescription: "We craft stunning, high-performance websites that convert visitors into customers. Using cutting-edge technologies like React and Next.js, we build blazing-fast experiences.",
     icon: Globe,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    pricing: "Starts at $1k",
+      pricing: "Starts at $2k",
     features: [
       { title: "Custom React/Next.js Applications", description: "Tailored solutions built with modern frameworks for optimal performance and developer experience." },
       { title: "Performance Optimization", description: "Lightning-fast load times through code splitting, lazy loading, and advanced caching strategies." },
