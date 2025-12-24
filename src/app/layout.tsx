@@ -10,23 +10,23 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: {
-    default: "EliteGYM | Transform Your Limits",
-    template: "%s | EliteGYM",
+    default: "vAlpha | Creative Excellence",
+    template: "%s | vAlpha",
   },
-  description: "Experience the ultimate fitness destination. EliteGYM offers world-class personal training, state-of-the-art equipment, and a community dedicated to your transformation.",
-  keywords: ["gym", "fitness center", "personal training", "bodybuilding", "yoga classes", "HIIT training", "EliteGYM"],
-  authors: [{ name: "EliteGYM" }],
+  description: "High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.",
+  keywords: ["software development", "web design", "SaaS", "AI integration", "digital agency", "vAlpha"],
+  authors: [{ name: "vAlpha" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "EliteGYM",
-    title: "EliteGYM | Transform Your Limits",
-    description: "Experience the ultimate fitness destination. EliteGYM offers world-class personal training, state-of-the-art equipment, and a community dedicated to your transformation.",
+    siteName: "vAlpha",
+    title: "vAlpha | Creative Excellence",
+    description: "High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EliteGYM | Transform Your Limits",
-    description: "Experience the ultimate fitness destination. EliteGYM offers world-class personal training, state-of-the-art equipment, and a community dedicated to your transformation.",
+    title: "vAlpha | Creative Excellence",
+    description: "High-performance software solutions for modern businesses. Specializing in Web, SaaS, AI, and Systems Integration.",
   },
   robots: {
     index: true,
