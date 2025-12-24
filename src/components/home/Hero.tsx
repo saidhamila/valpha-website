@@ -196,12 +196,9 @@ export function Hero() {
                 </div>
               </motion.div>
 
-              {/* Decorative Background Glows */}
-              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-sky/20 rounded-full blur-3xl -z-10" />
-              <div className="absolute -top-10 -left-10 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl -z-10" />
-            </motion.div>
-        </div>
-      </Container>
-    </section>
-  );
-}
+              </motion.div>
+          </div>
+        </Container>
+      </section>
+    );
+  }
