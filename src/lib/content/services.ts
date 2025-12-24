@@ -1,4 +1,4 @@
-import { Palette, Layout, Megaphone, Video, Globe, Smartphone, Sparkles, MessageSquare, Target, Camera } from "lucide-react";
+import { Layout, Globe, Smartphone, Sparkles, MessageSquare, Target, Zap, Bot, Database, Code2, Cpu } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface ProcessStep {
@@ -38,154 +38,154 @@ export interface PricingDetails {
 
 export const services: Service[] = [
   {
-    id: "branding-identity",
-    slug: "branding-identity",
-    title: "Branding & Identity",
-    shortDescription: "We craft iconic brands that tell your story and resonate with your audience.",
-    description: "Comprehensive branding solutions that define your visual and emotional identity.",
-    heroDescription: "Your brand is more than just a logo. We create cohesive identities that capture your essence and build lasting connections with your customers.",
-    icon: Palette,
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000&auto=format&fit=crop",
+    id: "web-development",
+    slug: "web-development",
+    title: "Web Development",
+    shortDescription: "High-performance websites and web applications built with modern technologies.",
+    description: "We build fast, responsive, and SEO-optimized websites that convert visitors into customers.",
+    heroDescription: "Our web development service focuses on creating high-performance digital experiences. We use the latest frameworks like Next.js to ensure your site is lightning fast and scales with your business.",
+    icon: Code2,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
     pricing: "Starts at $5k",
     features: [
-      { title: "Visual Identity Systems", description: "Comprehensive design systems including logos, color palettes, and typography." },
-      { title: "Brand Strategy", description: "Defining your brand's mission, vision, values, and market positioning." },
-      { title: "Verbal Identity", description: "Developing your brand's unique voice, tone, and messaging framework." },
-      { title: "Brand Guidelines", description: "Detailed documentation to ensure consistent brand implementation across all touchpoints." }
+      { title: "Next.js & React", description: "Modern, high-performance frontend frameworks for the best user experience." },
+      { title: "Responsive Design", description: "Websites that look and function perfectly on every device." },
+      { title: "SEO Optimization", description: "Built-in best practices to ensure high visibility on search engines." },
+      { title: "CMS Integration", description: "Easy-to-use content management systems so you can update your site easily." }
     ],
     deliverables: [
-      "Logo suite (Primary, Secondary, Icon)",
-      "Color palette & Typography",
-      "Brand style guide",
-      "Marketing collateral templates",
-      "Social media assets"
+      "Custom UI/UX Design",
+      "Production-ready Website",
+      "CMS Implementation",
+      "Performance Optimization",
+      "Technical Documentation"
     ],
     process: [
-      { step: "Discovery", description: "Deep diving into your business, competitors, and target audience." },
-      { step: "Strategy", description: "Developing the foundational pillars of your brand identity." },
-      { step: "Creative Direction", description: "Exploring visual concepts and aesthetic directions." },
-      { step: "Design & Refinement", description: "Crafting and polishing the final visual elements." }
+      { step: "Discovery", description: "Understanding your goals, audience, and technical requirements." },
+      { step: "Design", description: "Crafting a unique visual identity and user interface." },
+      { step: "Development", description: "Coding the website with a focus on performance and quality." },
+      { step: "Launch", description: "Deploying and testing to ensure a flawless experience." }
     ]
   },
   {
-    id: "web-digital-design",
-    slug: "web-digital-design",
-    title: "Web & Digital Design",
-    shortDescription: "Immersive digital experiences that blend aesthetic beauty with functional excellence.",
-    description: "Bespoke digital design that prioritizes user experience and brand storytelling.",
-    heroDescription: "We design websites and digital products that are not just beautiful, but intuitive and performance-driven. We turn digital touchpoints into brand experiences.",
+    id: "saas-development",
+    slug: "saas-development",
+    title: "SaaS Development",
+    shortDescription: "End-to-end development of scalable, secure, and intuitive SaaS platforms.",
+    description: "We turn your software ideas into powerful SaaS products that users love.",
+    heroDescription: "From MVP to enterprise solutions, we build SaaS platforms that are designed for growth. Our focus is on scalability, security, and a seamless user experience.",
     icon: Layout,
-    image: "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2070&auto=format&fit=crop",
+    pricing: "Starts at $15k",
+    features: [
+      { title: "Scalable Architecture", description: "Built to handle thousands of users without breaking a sweat." },
+      { title: "Secure Authentication", description: "Robust security measures to protect user data and privacy." },
+      { title: "Subscription Management", description: "Seamless integration with Stripe or other payment processors." },
+      { title: "Real-time Analytics", description: "Dashboards that provide valuable insights into your product's performance." }
+    ],
+    deliverables: [
+      "MVP Development",
+      "User Authentication System",
+      "Payment Integration",
+      "Admin Dashboard",
+      "API Documentation"
+    ],
+    process: [
+      { step: "Architecture", description: "Planning the technical stack and database structure." },
+      { step: "Prototyping", description: "Designing the core user flows and interface." },
+      { step: "Core Dev", description: "Building the essential features for your product launch." },
+      { step: "Deployment", description: "Setting up CI/CD pipelines and production environment." }
+    ]
+  },
+  {
+    id: "ai-assistance",
+    slug: "ai-assistance",
+    title: "AI Assistance",
+    shortDescription: "Intelligent AI features and custom LLM integrations to automate your business.",
+    description: "We help you leverage the power of AI to improve efficiency and enhance customer experiences.",
+    heroDescription: "Transform your business with custom AI solutions. We specialize in integrating Large Language Models (LLMs) into existing workflows to automate tasks and provide intelligent insights.",
+    icon: Bot,
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
     pricing: "Starts at $8k",
     features: [
-      { title: "UX/UI Design", description: "User-centric design focused on creating seamless and engaging digital journeys." },
-      { title: "Interactive Prototypes", description: "High-fidelity prototypes to visualize and test user interactions before development." },
-      { title: "Responsive Web Design", description: "Designs that look and function perfectly across all devices and screen sizes." },
-      { title: "Digital Product Design", description: "Comprehensive design for complex web applications and digital tools." }
+      { title: "LLM Integration", description: "Adding intelligent chat and automation features using OpenAI or Anthropic." },
+      { title: "Custom Training", description: "Fine-tuning models on your specific business data for better results." },
+      { title: "Process Automation", description: "Using AI to automate repetitive tasks and save valuable time." },
+      { title: "Smart Analytics", description: "AI-driven insights to help you make better business decisions." }
     ],
     deliverables: [
-      "UX wireframes",
-      "UI design mockups",
-      "Interactive prototypes",
-      "Design system components",
-      "Accessibility audit"
+      "AI Chatbot/Assistant",
+      "Custom Model Integration",
+      "Workflow Automations",
+      "Data Processing Pipelines",
+      "Prompt Engineering"
     ],
     process: [
-      { step: "User Research", description: "Understanding user needs and behavioral patterns." },
-      { step: "Wireframing", description: "Mapping out the structure and user flow." },
-      { step: "Visual Design", description: "Applying brand aesthetics to the digital interface." },
-      { step: "Prototyping", description: "Creating interactive models for testing and validation." }
+      { step: "AI Audit", description: "Identifying opportunities for AI integration in your business." },
+      { step: "PoC", description: "Building a Proof of Concept to validate the AI solution." },
+      { step: "Implementation", description: "Developing and integrating the AI features into your platform." },
+      { step: "Optimization", description: "Refining prompts and model performance for accuracy." }
     ]
   },
   {
-    id: "content-social-strategy",
-    slug: "content-social-strategy",
-    title: "Content & Social Strategy",
-    shortDescription: "Strategic content that builds community and drives engagement across platforms.",
-    description: "Driving growth through purposeful content creation and social media management.",
-    heroDescription: "We help brands find their voice in a crowded digital landscape. Our strategies are data-driven but creatively led, ensuring your message lands where it matters.",
-    icon: Megaphone,
-    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=2031&auto=format&fit=crop",
-    pricing: "Starts at $3k/mo",
-    features: [
-      { title: "Content Strategy", description: "Comprehensive roadmap for content creation, distribution, and measurement." },
-      { title: "Social Media Management", description: "Curating and managing your brand's presence across social platforms." },
-      { title: "Influencer Partnerships", description: "Connecting your brand with the right voices to expand your reach." },
-      { title: "Paid Media Strategy", description: "Targeted advertising campaigns to accelerate growth and conversions." }
-    ],
-    deliverables: [
-      "Content calendar",
-      "Social media asset library",
-      "Strategy document",
-      "Performance reports",
-      "Copywriting guide"
-    ],
-    process: [
-      { step: "Audit & Research", description: "Analyzing current performance and audience behavior." },
-      { step: "Strategy Development", description: "Defining content pillars and platform strategies." },
-      { step: "Production", description: "Creating high-quality content that resonates." },
-      { step: "Engagement & Growth", description: "Managing community and optimizing for reach." }
-    ]
-  },
-  {
-    id: "creative-production",
-    slug: "creative-production",
-    title: "Creative Production",
-    shortDescription: "High-end photo, video, and motion assets that bring your brand to life.",
-    description: "Full-service production for visual storytelling across all media.",
-    heroDescription: "We produce visual content that captures attention and tells your story with cinematic quality. From photography to motion graphics, we bring your brand to life.",
-    icon: Video,
-    image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop",
+    id: "api-integration",
+    slug: "api-integration",
+    title: "API & Systems Integration",
+    shortDescription: "Connecting your software ecosystem for seamless data flow and efficiency.",
+    description: "We ensure all your tools work together perfectly with custom API and database integrations.",
+    heroDescription: "Eliminate data silos and manual entry. We build custom integrations between your CRM, ERP, and web applications to create a unified and efficient software ecosystem.",
+    icon: Zap,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2068&auto=format&fit=crop",
     pricing: "Starts at $6k",
     features: [
-      { title: "Video Production", description: "Cinematic brand films, social content, and product showcases." },
-      { title: "Photography", description: "High-end commercial, lifestyle, and product photography." },
-      { title: "Motion Graphics", description: "Engaging animated content that adds a dynamic layer to your brand." },
-      { title: "Post-Production", description: "Expert editing, color grading, and sound design." }
+      { title: "Custom API Dev", description: "Building secure and well-documented APIs for your applications." },
+      { title: "Data Migration", description: "Safe and efficient movement of data between different systems." },
+      { title: "CRM/ERP Integration", description: "Connecting your business tools to your web platform." },
+      { title: "Database Architecture", description: "Designing optimized databases for high-speed data access." }
     ],
     deliverables: [
-      "Final video assets",
-      "High-res image library",
-      "Animated brand elements",
-      "Raw footage (optional)",
-      "Production plan"
+      "Custom API Endpoints",
+      "Integration Middleware",
+      "Automated Data Sync",
+      "System Documentation",
+      "Maintenance Plan"
     ],
     process: [
-      { step: "Pre-Production", description: "Scripting, storyboarding, and logistics planning." },
-      { step: "Production", description: "On-set filming or photography with professional crew." },
-      { step: "Post-Production", description: "Editing, sound design, and visual effects." },
-      { step: "Final Delivery", description: "Optimizing assets for all intended platforms." }
+      { step: "Mapping", description: "Auditing your systems and mapping data flows." },
+      { step: "Design", description: "Designing the integration architecture and endpoints." },
+      { step: "Implementation", description: "Building and testing the connections between systems." },
+      { step: "Monitoring", description: "Setting up logs and alerts to ensure reliability." }
     ]
   }
 ];
 
 export const faqs: FAQ[] = [
   {
-    question: "What is your creative process?",
-    answer: "Our process is highly collaborative and iterative. We start with a deep discovery phase to understand your brand and goals, followed by strategy, creative direction, design, and final production. We value your input at every stage to ensure the end result is perfectly aligned with your vision."
+    question: "What technologies do you use?",
+    answer: "We primarily use modern web technologies like Next.js, React, and TypeScript. For backend and APIs, we work with Node.js, Python, and various database systems like PostgreSQL and MongoDB. We also specialize in AI integrations using OpenAI and Anthropic APIs."
   },
   {
-    question: "Do you handle both design and production?",
-    answer: "Yes, we are a full-service creative agency. We can take a project from the initial strategy and design concepts all the way through to final production, whether that's a website launch, a brand rollout, or a video campaign."
+    question: "How long does a typical project take?",
+    answer: "A custom website usually takes 4-8 weeks, while complex SaaS platforms or AI integrations can take 3-6 months. We work in phases to ensure you get value as quickly as possible, starting with an MVP."
   },
   {
-    question: "How do you measure the success of a project?",
-    answer: "Success metrics depend on the project goals. For branding, it might be brand recognition and sentiment. For digital design, it could be user engagement and conversion rates. For content strategy, we look at reach, engagement, and community growth. We define these KPIs with you at the start of every project."
+    question: "Do you offer post-launch support?",
+    answer: "Yes, we offer ongoing maintenance and support packages to ensure your software remains secure, up-to-date, and continues to perform at its best as your business grows."
   },
   {
-    question: "What industries do you specialize in?",
-    answer: "While we have experience across many sectors, we specialize in working with lifestyle, technology, fashion, and premium service brands that value high-end design and strategic storytelling."
+    question: "Can you work with our existing team?",
+    answer: "Absolutely. We often work alongside internal development or product teams to provide specialized expertise in AI, SaaS architecture, or API integrations."
   },
   {
-    question: "Can we work on a single project or do you require a retainer?",
-    answer: "We offer both project-based engagements and ongoing retainers. Single projects are great for branding or website launches, while retainers are ideal for ongoing content strategy, social media management, and creative support."
+    question: "How do you handle project management?",
+    answer: "We use agile methodologies with weekly check-ins and progress reports. You'll have access to a dedicated project board where you can track the status of all tasks and deliverables in real-time."
   }
 ];
 
 export const pricingDetails: PricingDetails = {
-  initial: "Every creative project is unique. We begin with a discovery session to understand your scope and objectives, providing a transparent proposal with clearly defined phases and deliverables.",
+  initial: "Every software project is unique. We begin with a technical discovery session to understand your requirements, providing a transparent proposal with clearly defined milestones and fixed pricing for each phase.",
   recurring: [
-    { label: "Monthly Retainer", price: "From $2,500/mo" },
-    { label: "Creative Direction", price: "From $200/hr" }
+    { label: "Maintenance & Support", price: "From $1,500/mo" },
+    { label: "Ongoing Development", price: "From $150/hr" }
   ]
 };

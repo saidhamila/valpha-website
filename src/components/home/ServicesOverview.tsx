@@ -10,11 +10,11 @@ import { services } from "@/lib/content/services";
 
 export function ServicesOverview() {
   return (
-    <Section
-      eyebrow="What we do"
-      title="Creative Solutions"
-      description="We blend strategy, design, and technology to build brands that leave a lasting impression."
-    >
+      <Section
+        eyebrow="What we do"
+        title="Software Solutions"
+        description="We build high-performance software that solves real business problems and drives growth."
+      >
       <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
         {services.map((service, index) => (
           <motion.div
