@@ -11,6 +11,9 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 export const metadata: Metadata = {
   title: "vAlpha | Creative Digital Agency",
   description: "High-performance software and immersive digital experiences for the next generation of brands.",
+  icons: {
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Untitled-design-13-1766536595488.png?width=8000&height=8000&resize=contain",
+  },
 };
 
 export default function RootLayout({
