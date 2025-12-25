@@ -20,9 +20,9 @@ export function AboutHero() {
               <h1 className="text-4xl sm:text-5xl font-bold font-heading text-foreground tracking-tight">
                 Crafting narratives that define the future.
               </h1>
-              <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-                We&apos;re a collective of designers, storytellers, and creative strategists dedicated to building brands that resonate. Since 2020, we&apos;ve helped visionary companies translate their essence into immersive experiences.
-              </p>
+                <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
+                  We&apos;re a collective of designers, storytellers, and creative strategists dedicated to building brands that resonate. Since 2023, we&apos;ve helped visionary companies translate their essence into immersive experiences.
+                </p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}

@@ -5,10 +5,10 @@ import { motion, useInView } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 
 const stats = [
-  { value: 150, suffix: "+", label: "Brands Transformed" },
-  { value: 500, suffix: "+", label: "Creative Projects" },
-  { value: 15, suffix: "+", label: "Industry Awards" },
-  { value: 10, suffix: "+", label: "Years of Craft" },
+  { value: 25, suffix: "+", label: "Projects Delivered" },
+  { value: 15, suffix: "+", label: "Happy Clients" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { value: 2, suffix: "+", label: "Years of Excellence" },
 ];
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
