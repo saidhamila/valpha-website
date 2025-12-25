@@ -1,0 +1,76 @@
+{
+    "name": "vAlpha",
+    "short_name": "vAlpha",
+    "description": "High-performance software and immersive digital experiences for the next generation of brands.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#020617",
+    "theme_color": "#38BDF8",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "business",
+        "productivity"
+    ],
+    "lang": "en",
+    "dir": "ltr",
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Get a Quote",
+            "short_name": "Quote",
+            "description": "Request a project quote",
+            "url": "/quote",
+            "icons": [
+                {
+                    "src": "/favicon.svg",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Our Services",
+            "short_name": "Services",
+            "description": "View our services",
+            "url": "/services",
+            "icons": [
+                {
+                    "src": "/favicon.svg",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Contact Us",
+            "short_name": "Contact",
+            "description": "Get in touch",
+            "url": "/contact",
+            "icons": [
+                {
+                    "src": "/favicon.svg",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ]
+}

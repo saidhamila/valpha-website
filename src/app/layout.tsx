@@ -7,6 +7,13 @@ import { Providers } from "@/components/Providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { CookieConsent } from "@/components/CookieConsent";
+import {
+  JsonLd,
+  generateOrganizationSchema,
+  generateWebSiteSchema
+} from "@/lib/schema";
+
 
 // ============================================
 // METADATA & SEO
@@ -22,6 +29,11 @@ export const metadata: Metadata = {
   authors: [{ name: "vAlpha" }],
   creator: "vAlpha",
   publisher: "vAlpha",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://valpha.com"),
+  alternates: {
+    canonical: "/",
+  },
+  manifest: "/manifest.json",
   icons: {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
@@ -49,6 +61,14 @@ export const metadata: Metadata = {
     title: "vAlpha | Creative Digital Agency",
     description: "High-performance software and immersive digital experiences for the next generation of brands.",
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "vAlpha",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 // Viewport configuration for mobile optimization
@@ -60,6 +80,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  userScalable: true,
 };
 
 // ============================================
@@ -74,7 +95,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Preconnect to critical third-party origins for faster resource loading */}
+        {/* JSON-LD Structured Data */}
+        <JsonLd data={generateOrganizationSchema()} />
+        <JsonLd data={generateWebSiteSchema()} />
+
+        {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://slelguoygbfzlpylpxfs.supabase.co" />
@@ -86,18 +111,61 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body className="antialiased">
-        {/* External scripts - load after page is interactive for better performance */}
+        {/* Service Worker Registration */}
+        <Script
+          id="sw-register"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('[SW] Registration successful:', registration.scope);
+                  }).catch(function(error) {
+                    console.log('[SW] Registration failed:', error);
+                  });
+                });
+              }
+            `,
+          }}
+        />
+
+        {/* Google Analytics - Replace GA_ID with your ID */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="lazyOnload"
+            />
+            <Script
+              id="google-analytics"
+              strategy="lazyOnload"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+
+        {/* External scripts - load after page is interactive */}
         <Script
           id="orchids-browser-logs"
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
-          strategy="lazyOnload" // Changed from afterInteractive for better performance
+          strategy="lazyOnload"
           data-orchids-project-id="25497254-eb33-418f-af86-b167421cec1c"
         />
         <ErrorReporter />
         <Script
           id="route-messenger"
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
-          strategy="lazyOnload" // Changed from afterInteractive for better performance
+          strategy="lazyOnload"
           data-target-origin="*"
           data-message-type="ROUTE_CHANGE"
           data-include-search-params="true"
@@ -105,22 +173,25 @@ export default function RootLayout({
           data-debug="true"
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
+
         <Providers>
           {/* Accessibility: Skip to main content link */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sky focus:text-primary focus:rounded-lg"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sky focus:text-primary focus:rounded-lg focus:ring-2 focus:ring-sky focus:ring-offset-2"
           >
             Skip to main content
           </a>
           <Header />
-          <main id="main-content">{children}</main>
+          <main id="main-content" role="main">{children}</main>
           <Footer />
           <ScrollToTop />
         </Providers>
+        <CookieConsent />
         <VisualEditsMessenger />
       </body>
     </html>
   );
 }
+
 
