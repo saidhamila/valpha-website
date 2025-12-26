@@ -100,7 +100,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
         "@type": "Organization",
         name: "vAlpha",
         url: BASE_URL,
-        logo: `${BASE_URL}/favicon.svg`,
+        logo: `${BASE_URL}/favicon.png`,
         description: "High-performance software and immersive digital experiences for the next generation of brands.",
         sameAs: [
             // Add social media profiles here
